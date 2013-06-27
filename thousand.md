@@ -1,9 +1,9 @@
-Thousand Ideas for Computing
+One Hundred Ideas for Computing
 ===
 
-This is a summary of my ideas. My theme tends to be toward integrating technologies and existing ideas together.
+Do you like ideas? I like to write down my ideas and have been doing so for a number of years. This is an selection of my favourite ideas old and recent. My theme is integration. These ideas are numbered for reference.
 
-## 1. Email Metadata
+## 1. [Email Metadata](id:email-metadata)
 
 Emails could contain comprehensive metadata about the human readable content depending on the sort of email it is. This machine readable information could be interpreted metadata to:
  
@@ -17,57 +17,83 @@ For example:
 
 Potential Integrations
 
- * HATEOAS for determining actions on an email
+ * HATEOAS for determining actions on an email: 'Unsubscribe' a mailing list email, 'Accept Invitation' for an invite, 'Reject Request'. We should be able to do more than just 'Reply' or 'Forward' an email.
  * Life Engine
  * Living document
  * Contextual
+ * [Email as social networking transport]()
 
 Existing:
  
- * OpenEmailMetadata
+ * [OpenEmailMetadata](https://github.com/samsquire/OpenEmailMetadata) - my exploration
  * [MailXML](http://www.idealliance.org/specifications/mailxml)
+ * [Candle](http://candleapp.blogspot.co.uk/2011/06/why-i-invented-candle-i.html)
 
-## 2. Decentralised Social Networking
+## 2. Use Email as a Social Networking Transport
 
-The industry lacks an open social network. A DSN should support:
+The industry lacks an open social network. A social network can be build ontop of email: the user interface can  be a specialised email client with email as the transport mechanism. Everybody has an email address and web frameworks can easily communicate using mail protocols.
 
- * data privacy through permissions and encryption
- * ability to export content
+Email can be used as a common denominator protocol. A flexible and federated social network would abstract the protocol used for communication and upgrade to a more appropriate or efficient protocol.
+
+ * Users can send invitation requests in a regular email that includes a public key.
+ * All shared content remains stored on the user's computer but can be hosted elsewhere.
 
 Potential Integrations
 
- * Email metadata
- * Life Engine
+ * [Email metadata](#email-metadata)
+ * [Life Engine]
  
  Existing:
  
-  * [Diaspora](https://joindiaspora.com/), [BuddyCloud](http://buddycloud.com/), [Status.Net](http://status.net/), [SockNet](http://socknet.net/w/The_Socknet), Apple Seed, Freenet Sone
+  * [Diaspora](https://joindiaspora.com/), [BuddyCloud](http://buddycloud.com/), [Status.Net](http://status.net/), [SockNet](http://socknet.net/w/The_Socknet), Appleseed
  
-## 3. Community Idea: Design This
+## 3. Community Idea: [Design This](id:design-this)
 
 Developers need designers to give websites viable designs. This community brings developers with complete website backends and matches them with designers to give the backend a design.
 
-## 4. Living Documents
+ * Developer: "I written the business logic, the backend API and a rudimentary frontend but I need a real design for a website."
 
-Blogs, forums, wikis and social networks solve variations of the same problem. Unfortunately they are not integrated enough. Writing a post should allow me to take advantage of:
 
- * collecting arbitrary structured data from the recipient rather than just a freestyle comment box. Collect information *within* the article.
- * allow users to provide corrections (wiki functionality)
- * split up the document into reuseable components (wiki like transclusion)
- * renderers display data in multiple ways
+## 4. [Living Documents](id:living-documents)
+
+Blogs, forums, wikis and social networks solve variations of the same problem. Unfortunately they are not integrated enough. A blog post is not dynamic and flexible as it could be. Writing a post should allow me to take advantage of:
+
+ * Collecting arbitrary structured data from the recipient rather than just a freestyle comment box at the bottom of a document. Information can be collected *within* the article such as small call to action button buttons that when clicked add form fields for the user to contribute to.
+ * Allow users to provide corrections such as spelling (wiki functionality)
+ * Split up the document into reuseable components (wiki like transclusion)
+ * Rendering display data in multiple ways
  
+Examples:
 
-## 5. Life Engine
+```
+A blogger is reviewing a number of products on an ongoing basis. The blogger creates a post for a given product category and headings for each offering. Attributes and ratings are placed in a bulleted list. The blogger endeavours to update the blog post whenever information changes regarding a product or when a new product is to be reviewed.
 
-Life engine is a dashboard that attempts to collect relevant information about your life into one place.
+	- Ideally the blogger wants to display product attributes consistently and update them from one place.
+	- Creating a summary of reiews at the bottom (without having to duplicate the information)
+	- Ask users for product suggestions, perhaps with an embedded form.
+	- The blogger wants to track the price or offers over time.
+	- Allow users to make comments regarding particular products or ratings. Allow users to give their own ratings for an attribute.
+
+This blogger uses a HTML strikethrough to indicate that information has been updated in a blog. This is not transparent to the user. For information such as the price or a rating of a product over time, it will be difficult to see what the value was in the past and when it was changed. They may want to show a graph of the product ratings over time.
+``` 
+
+Existing:
+
+ * [LightTable](http://www.lighttable.com/)
+
+## 5. [Life Engine](id:life-engine)
+
+Life engine is a dashboard that attempts to collect information about your life and display relevant data on a single screen.
 
  * bank account balances
  * upcoming birthdays for friends
  * dream diary
- * family, friend member status
+ * family, friend member statuses
  * important emails
  * to-do list, goals, reminders, calendar integration
  * lent possessions
+ * alerts: hard disk space
+ * active contractual obligations: appartment complex, mobile phone
 
 Existing:
 
@@ -76,7 +102,7 @@ Existing:
  
 ## 6. Community Idea: Ethical Me
 
-A tool to track the decisions of organisations and allow consumers to register their buying decisions in a thoughtful way.
+A tool to track the decisions of consumers to register their buying decisions in a thoughtful way.
 
 ## 7. Peer to Peer Blocking
 
@@ -84,7 +110,7 @@ Block by default is inconvenient to users. Community driven blocking reduces ris
 
  * Firefox Request Policy
  * Host file blocking
- * Firewall rule
+ * Firewall rules
  * Application behaviour
  
 Potential Integrations:
@@ -93,7 +119,7 @@ Potential Integrations:
  
 Existing:
 
- * cloud based security providers, Site Advisor, 
+ * cloud based security providers, Site Advisor
 
 ## 8. Command Line Auto-complete
 
@@ -104,24 +130,31 @@ Command line auto-complete could be offered by:
 
 For example, if the user types `grep -v`, they may get an auto-complete for `--invert-match`.
 
-## 9. Elements Represent Themselves
+Potential integrations:
+
+ * Use doclifter and parse process resulting DocBook XML
+
+## 9. [Elements Represent Themselves](id:elements-represent-themselves)
 
 A rendering of data should stand-in and represent itself.
 
  * If you have an open program and see a filename in the title bar next to that file's icon, you should be able to interact with that name or icon in the same as you can elsewhere. For example, you should be able to move the file or rename it. You should be able to drag it into an open email.
 
  * If an application displays an IP address, a hostname, a filesize or some unit measurement, the user should be able to interact with these things with a tool that accepts these as arguments. Clicking a filesize may show where that space is being taken on the filesystem. Clicking an IP address may offer actions such as 'ping'. Clicking a unit measurement may show unit conversion tools.
+ 
+When data is rendered, its type information should be preserved.
 
 Potential Integrations:
 
  * the environment has knowledge, representational computing
+ * types in the desktop environment
  
 ## 10. The Environment has Knowledge / Context-Aware Computing
  
-Running applications expose information on what information they can provide and what they will accept. Bring type systems up into the desktop environment. Everything - including programs, have a type and have typed parameters. The system helps you fulfil type arguments for running programs:
+Running applications expose information on what information they can provide and what they will accept. Bring type systems up into the desktop environment. Everything - including programs, have a type and have typed parameters. A system should help you fulfil type arguments for running programs. For example:
 
  * You have window open that is requesting an IP address.
- * Your machine exposes an IP address and your VPN provides an IP address. Your online friends provide an IP address.
+ * Your machine exposes an IP address and your work VPN provides an IP address. Your online friends provide an IP address for a game server in a window.
  * You can pick the IP address from the available sources without having to type it in.
 
 Existing: 
@@ -130,13 +163,14 @@ Existing:
  
 Potential integration:
 
- * drag and drop is no longer handled specifically
+ * drag and drop is no longer handled by clumsy drag and drop APIs
+ *
 
 ## 11. Representational Computing
 
 Representations are specific or generic. Completing a task has a representation, such as 'render image' and if requested will select a program depending on contextual criteria. If the input data is in PNG format then it must pick a program representation that can render PNG. The inputs and outputs of programs are representations themselves so the type matching works upon programs themselves.
 
-RC is akin to a program requesting a library that provides 'X' and having that library injected in.
+RC is akin to a program requesting a library that provides 'X' and having that library injected in. (see [representations are tests](#representations-are-tests))
 
 Existing:
 
@@ -150,10 +184,37 @@ Existing:
 There are multiple package managers that have to be controlled with separate programs. Setting up a machine involves installing various package managers. It seems a hierarchy of package managers woud permit installing any number of packages.
 
  * package managers have consistent standard command-line API that lets them be driven by other programs to avoid special cases for package managers
+ * can namespace packages of package managers
+ 
+For example, if you were installing Typo, a blog platform:
+
+ * you'll need RVM which is installed by script
+ * Ruby which is installed by RVM
+ * RubyGems which is installed by a Ruby script
+ * Ruby on Rails
+ * MySQL
+
+By the end of this process, we've used two custom scripts and two package management systems. First the environment manager (RVM) and a language specific package manager (rubygems) and before we can even think about installing Typo3 with bundle. We still have not actually configured the software.
+
+This could look something like this, where each package manager is namespaced:
+
+```
+mpm install script/https://get.rvm.io \
+	rvm/1.9.3 \
+	script/git@github.com/rubygems/rubygems/setup.rb \
+	gem/rails \
+	apt/mysql-server \
+	apt/mysql-client \
+	bundle/http://typosphere.org/stable.tgz
+```
+
+Potential integrations:
+
+ * Infrastructure as code
 
 ## 13. Package Driven Development
 
-Software complexity prohibits quick and repeatable set-ups. Software should be written to be packageable and repeateable from the very start.
+Software complexity prohibits quick and repeatable set-ups. Software should be written to be packageable and repeateable from the beginning.
 
  * Not only does software need testing but the packages do too.
  * Installing the package should be enough (minus configuration) to begin running software
@@ -168,11 +229,11 @@ Infrastructure is complicated and the relationships between hosts, paths, ports 
 
 The spider would scan for configuration files, identify port numbers, paths and hostnames to insert into a graph. When the spider detects a reference to the same value, it creates an edge from both usages to the actual data. This graph then becomes a reprsentation of system configuration, the edges link the configuration values are live and synchronized, an administrator can change the data in a single location and cause the usages to update.
 
-## 15. Community Idea: Create This
+## 15. Community Idea: [Create This](id:create-this)
 
-This is like the 'Design This' but in reverse. Designers create a design and a developer creates a backend to the site. Ideally suited to open source projects.
+This is like the [Design This](#design-this) but in reverse. Designers create a design and a developer creates a backend for the site. Ideally suited to open source projects.
 
-## 16. Team Fund
+## 16. "We Want This" (The Reverse Kickstarter)
 
 A group of people want to create something but do not have the time or energy to create it. They collaboratively decide what they want and raise funding.
 
@@ -181,33 +242,71 @@ A group of people want to create something but do not have the time or energy to
  * users who possess the required skills for a role offer to work
  * experts get paid, committee gets idea implemented
 
-This is like a reverse kickstarter or a petition. Existing crowdfunding services
+This is like a 'reverse kickstarter' or a petition.
  
 Existing:
 
  * Kickstarter, in reverse
 
-## 17. Bubble Routing
+## 17. Clientside Bubble Routing
 
 Bubble routing is an approach to detecting and handling events on the clientside. Most frameworks do not use bubbling to its full potential, they create a handler for each area where an event needs to be handled and stop propagation once it has been handled. Bubble routing uses a single event handler by taking advantage of the natural structure of the DOM and bubbling. Each element the event passes through enhances the information of the request before it gets to the topmost level where the event is actually handled.
 
- * Example: http://fiddle.jshell.net/SWrX5/15/
+ * Example: http://fiddle.jshell.net/SWrX5/17/
 
 
 ## 18. Shortcut Format
 
-Keyboard shortcuts are configured differently in each program. Shortcut configuration should be in a standard format.
+Keyboard shortcuts are configured differently in each program. Shortcut configuration should be in a standard format. This way you can load them and share them between operating systems and share configurations between applications.
+
+ * A user should be able to use the same shortcut configuration in one browser as another.
 
 ## 19. Separating Frontends and Backends
 
-Good design separates the frontend and the backend. This should be the case on the desktop too. If frontends and backends were separated, one could use the same underlying mail or instant messenger client but switch between frontends. Backends and Frontends would communicate according to some representation.
+Good design separates the frontend and the backend. This should be the case on the desktop too. If frontends and backends were separated, one could use the same underlying mail or instant messenger client but switch between frontends. Backends and Frontends would communicate according to some protocol.
 
-## 20. File Explorer Features
+Existing:
 
-These are some features for file exploring programs I have always wanted. Some are already existing:
+ * Node Webkit
+ * SCGUI
 
- * `Put in Folder` puts the selected content into a new folder
- * `Copy Path` why do I need to copy path if I can see the file
+## 20. File Management Features
+
+File management tools should make obvious raw local folders and an enhanced or remote folders. These are some features for file exploring programs I have always wanted. Some already exist.
+
+When I right click a [representation of a file](#elements-represent-themselves) (such as an icon or a filename), I should be able to interact with the file or folder in the following ways:
+
+ * `Put in New Folder` asks the user for a folder name and puts the selected files into this folder. The user does not have to create a new folder and manually move the files across.
+ * `Pull out of Folder` move the files in a folder out of the directory
+ * `Copy Path` I shouldn't need to open a properties dialogue to copy the path from or construct the path myself.
+ * `Storage Usage` right click and view disk usage of the file in relative to everything else on the storage device
+ * `Outsource` move the storage of the file elswhere but keep a link to the file here
+ * `Compress`, `Convert`
+ * `Security Settings` Add file permissions, encryption and enforce rules.
+ * `Share` Make this file available to another person or machine.
+ * `Add To Backup` You have a backup configured and you want to add this file or folder to your existing backup procedure.
+ * `Tag`
+ * `Merge Folders` 
+ * `Resize`
+ * `File History` View changes of the file over time.
+ * `Usages` Find references to this file from elsewhere in the file system such as in email attachments or as referenced paths.
+ * `Search` Search the contents of the file.
+ * `File Structure` Inspect the high-level structure of the file (such as a archived file) and any nested file systems or learn about underlying file format.
+
+In the detailed list view for a folder, I should be able to see the following:
+
+ * `File Indicators` A file or folder that is being used or processed by another running program should be obvious from the file explorer. If a file is open in another program - show an icon of that program. If a long running process is running involving the file, show  a progress bars should appear near the file such as a progress bar for files being downloaded, copied, scanned or backed up.
+ * If the file is not physically present on this machine, show icons that represent the storage services or rmeote machines that the file is available under.
+ * `Time Remaining`
+
+In a file management window, I might want to be able to:
+
+* `Jump to Path` The ability to jump to a location from anywhere in the system. You have a path in your clipboard and want to open it.
+
+
+Existing:
+
+ * Some of the above are available in [KDE Services](http://kde-apps.org/content/show.php/?content=147065)
  
 ## 21. If you can see it, you can use it (SIUI)
 
@@ -220,18 +319,18 @@ Take the output of git status for example:
 # Changes to be committed:
 # (use "git reset HEAD ..." to unstage)
 #
-# modified: hello.py
+# modified: file.ext
 #
 # Changes not staged for commit:
 # (use "git add ..." to update what will be committed)
 # (use "git checkout -- ..." to discard changes in working directory)
 #
-# modified: main.py
+# modified: file2.ext
 #
 # Untracked files:
 # (use "git add ..." to include in what will be committed)
 #
-# hello.pyc
+# file3.ext
 ```
 
 If you want to refer to a file name in the above, you could type it out and use your shell's auto-complete functionality. You could copy and paste it with the mouse or your terminal multiplexer. You should be able to refer to paths mentioned directly.
@@ -239,9 +338,9 @@ If you want to refer to a file name in the above, you could type it out and use 
  * A program puts the paths into environment variables. The output of the program is adjusted to add numberings such as:
  
 ```
-# modified: hello.py [1]
+# modified: file.ext [1]
 ```
- Now I should be able to refer to the 1 in some way, perhaps `$m1` now stands for 'modified file 1'.
+ Now I should be able to refer to the 1 in some way, perhaps `$m1` now stands for 'the first modified file on the list' which is 'file.ext'.
 
  * Hint mode places an overlay over the interface and numbers various things on the screen to be clicked. (see vimperator hint mode)
 
@@ -274,6 +373,7 @@ This could be implemented lazily so that the effort to parse the output is not m
 
 Shell operations may be simpler as programming constructs. This way one could use the shell programmatically, in different languages.
 
+```
 wget http://example.com/ |  
 (require '[cheshire.core :refer :all])
 (require '[clj-http.client :as client])
@@ -282,6 +382,7 @@ wget http://example.com/ |
 		:query-params {(input "m") (input "l")}
 	} )
 )
+```
 
 Existing:
 
@@ -305,9 +406,11 @@ Existing:
 
 ## 24. Error to Issue Tracker Linkage
 
-There should be some kind of mapping between the product's error state and a potential issue number. Currently the connection between an error condition and an issue in a tracking system is completely human - someone has to manually enter the error into an issue tracker. Bug reporting should either be intregrated into an application or interpreted by the desktop or container environment.
+If every compiler error is automatically converted into an issue and then automatically closed when it is absent, this would give visibility to problems that were solved and which still remain. This could be integrated with a build system.
 
- * An graphical application facing an error condition typically report through a dialogue. This dialogue should display the known cases that cause this error. This is possible because Error Condition X was mapped to Issue Y which had associated Reason Z.
+There should also be some kind of mapping between the product's error state and a potential issue number. Currently the connection between an error condition and an issue in a tracking system is completely human - someone has to manually enter the error into an issue tracker and update the program to refer to it. Bug reporting should either be intregrated into an application or interpreted by the desktop or container environment. The error state should be detectable and linked to the issue tracker.
+
+ * An graphical application facing an error condition typically reports errors a dialogue. This dialogue should display the known cases that cause this error. This is possible because Error Condition X was mapped to Issue Y which had associated Reason Z.
 
 ``` 
 Error copying files: drive removed. Typically caused by:
@@ -319,6 +422,10 @@ Error copying files: drive removed. Typically caused by:
  Compiler error: undefined is not a function (line 13)  
  	> A variable on Line 13 is undefined
  ```
+ 
+ Potential integrations:
+  
+  * [Software metadata for the error reporting servers](#software-metadata)
 
 ## 25. Error Heuristics
 
@@ -378,27 +485,38 @@ Information can be used to find relationships and connect actions that operate o
  
  * An open folder manager window a folder open. This can be interpreted as a list of dates and times. A calendar program can read and display the sequence of dates and times to show when files were created/modified along a timeline. This may be useful with photographs.
  
- * A spreadsheet program is opened and contains a sequence of dates. When the user views a date in a different application or on a web page, the environment refers to the spreadsheet filename.
+ * A spreadsheet program is opened and contains a sequence of dates. When the user view s a date in a different application or on a web page, the environment refers to the spreadsheet filename.
  
-This functionality would be user driven as to avoid performance issues.
- 
+This functionality would be user driven as to avoid performance issues. If I want to see what an application is using or doing:
+
+ * I should be able to 'inspect' a program to view various aspects of the program. This could be a tree view that shows resources the application is using,  what components have been loaded, the data that is currently being operating on and the modules are loaded. I should be able to see the internals of the application but in a high-level way. This should be queryable programmatically and useable in a distributed setting. ([explorable context](#explorable-context))
+
+
+Similar:
+
+ * [lennier's comment on desktop environments](http://tech.slashdot.org/comments.pl?sid=2585722&cid=38456084)
+
 Existing:
- 
+
+ * Process Viewers, Sysinternals 
  * Object Linking and Embedding
- * Wiki software
+ * Registry editor
+ * Microsoft SnapIns, Windows Management Instrumentation
+ 
 
-## 28. Representations, Interfaces and Tests
+## 28. [Representations are Tests](id:representations-are-tests)
 
-A representation dictates what you can do or how you can use it. A PNG file, a JSON or C sourcecode or a HTML file. An interface is validated by the tests that it passes. What something is can be determined by the tests that it passes.
+A representation dictates what you can do or how you can use it. A PNG file, a JSON document or C sourcecode or a HTML file. An interface is validated by the tests that it passes. What something is can be determined by the tests that it passes.
 
  * A HTTP server supports the 'HTTP Protocol'. A HTTP server has an interface of HTTP methods over TCP. This can be verified by a test suite, perhaps one based on an RFC.
  * A sort algorithm can be stable or unstable.
+ * Compliance tests such as those for JSON parsers.
 
-The hard part is providing a mapping between a representation definition and the true interface. Tests
+The hard part is providing a mapping between a representation definition and the true interface.
 
 ## 29. Community Idea: API Competition
 
-Libraries compete on performance and API design. The representation of a problem stays the same but can be solved in multiple ways. For example:
+Libraries compete on performance and API design. The statement of the problem stays the same but can be solved in multiple ways. For example:
 
  * an API for making HTTP requests
  * a query language for data
@@ -406,20 +524,37 @@ Libraries compete on performance and API design. The representation of a problem
  * widget APIs
  * sort algorithms
  * client side web frameworks
- 
+
+APIs proposed should be voted and discussed. Implementations can be attempted.
+
 Existing:
 
  * Js Perf
  * Benchmarks
 
 
-## 30. Triple Architecture
+## 30. [Widget Servers](id:widget-servers)
 
-Modern architecture splits web applications internally between a backend API and a web interface that communicates with the backend API. This is inadequate for designers.
+It should be possible for design and development workflows to co-exist and to work lockstep. Modern architecture splits web applications into layers and separates data, presentation and logic. This separation is inadequate for designers. This can manifest as designs being implemented top-down into the presentation layer. Depending on the architecture, aesthetic or functional changes require development effort. A triple architecture separates and provides tools for the tasks:
+
+ * Creation of the design and style of pages and their components complete with dummy data and all the different states that the widget can be in. (Design, User Experience/Design)
+ * Specifying what kinds of data the widget 'wants' to display. (Analysis, Design)
+ * A service that when requested, returns the widgets that need to be on the page
+a service that turns widgets into data requests. (Widget Server)
+* A backend service stores and returns data. (Storage)
+* A backend service that handles business logic. (Business logic)
+* The association of 'stories' or 'criteria' or 'situation' with widget and widget state (Management)
+
+Different people can work on the above in parallel because they are working with interfaces.
 
  * Backend business logic
  * Creating widgets or website components
  * Organizing and placing widgets onto pages
+
+
+Potential integrations:
+
+ * Explorable Context/What can I use 
  
 
 ## 31. Mounting Sourcecode
@@ -428,7 +563,7 @@ Sourcecode we compile or execute need not be the same as that rendered to the sc
 
 Coding style preferences can be configured on the mounted source code so that it appears according to the developer's taste. Developers can choose indention rules and spacing settings without affecting other developers.
 
-Personal preference also changes how people like to organize sourcecode by directory. Many conventions such as the following
+Personal preference also changes how people like to organize sourcecode by directory. Directory structures can be equivalents:
 
 ```
  - src
@@ -437,10 +572,21 @@ Personal preference also changes how people like to organize sourcecode by direc
   - views
  - docs
 ``` 
+```
+ - modules
+  - users
+   - views
+   - users.controller
+  - products
+   - views
+   - products.controller
+ - public
+
+```
 
 Potential integrations:
 
- *  Easier userspace file systems
+ *  Branching libraries
 
 ## 32. The Built-In Enemy
 
@@ -455,6 +601,9 @@ The 'Built-In Enemy' is a suite of heuristics that find security problems on a m
  
  * versions of libraries or running software
  * permission problems, the permissions of running applications (user, group)
+ * exploit frameworks that to run expoit attempts locally
+ * looks for known in known versions of software
+ * looks for weaknesses in the SSL certificates
 
 Existing:
 
@@ -473,6 +622,18 @@ Individuals lack personal infrastructure for photographs, videos, email or other
 Personal infrastructure providers could take the same approach as business hosting or cloud providers. They sell use of the infrastructure but provide value added services. This would be nice as an open source.
  
 Personal infrastructure providers should start a trend where they provide not only the front end applications or web clients but provide direct access to the backend machinery hosted in the cloud. This would cater for power users and casual users.
+
+PI could be distributed as a virtual machine that includes:
+
+ * VPN software for securely logging on
+ * file server
+ * file synchronization tools
+ * collaborative text editor (such as etherpad)
+ * certificate authority, key management for security
+
+Existing:
+
+ * 'personal cloud' providers such as [Tonido](http://tonido.com/) and [OwnCloud](http://owncloud.org/)
  
 ## 34. Bluetooth Friend Mesh
 
@@ -511,7 +672,7 @@ Documentation and wikis are prone to fall behind a code base. Creating documenta
  * Documentation acts as a specialised test case. When example code in the documentation no longer compiles the build should fail.
  * Documentation should be linked to refactoring operations. When variables are renamed or code is moved, all the references to variables and methods should automatically update.
 
-## 37. Code Overlays
+## 37. [Code Overlays](id:code-overlays)
 
 Code overlays can make sourcecode more like a document and make it easier to understand. Source code editors make poor use of space when rendering code. For example:
 
@@ -546,5 +707,893 @@ Code is inherently linked and related. This is similar to wikis and the nature o
 
 The data on your screen has a trail of influence. Multiple sections of code are touched before output is displayed.
 
- * There is data displayed in a wdiget. Viewing the influences of this widget would show the source of the data such as the file, the API that was used, the connected database, the query that was executed.
+ * There is data displayed in a wdiget. Viewing the influences of this widget would s#how the source of the data such as the file, the API that was used, the connected database, the query that was executed.
  * An error is displayed, viewing the influences of this data will show what component the error was raised in and the configuration of that component.
+
+## 40. [Input Services](id:input-services)
+
+The embeddable widgets that platforms provide should be interchangeable and interoperable. Currently the choice of widget libraries is made by application developers rather than the user.
+
+ * Text input edits should be configurable. It should be possible to choose what text editor to use for your applications. Perhaps you want to use advanced text editors or. 
+ * Pick a calendar field editor.
+ 
+## 41. Drill-down Interface
+
+A widget represents data on the screen. It has a limited amount of space because it must co-operate with other widgets on the screen to give the entire screen meaning. Widgets are constrained horizontally and vertically. The amount of data that widgets should display depends on the current geometry. A drill down interface would allow to the user to inspect a particular facet of the interface and give it more importance, perhaps by double clicking it. This would be trigger a resize of all the widgets on the screen to accommodate the user's updated intent of focus. This would involve some widgets disappearing and others appearing.
+
+ * User Interfaces should not be considred merely the output of a program, they are an interactive program that the user drives and is in full control.
+
+Examples:
+
+```
+An email client shows a panel of folders, an email preview pane and a detailed table of emails
+
+ - Drilling down into the preview pane would make it much larger and provide a small reply box.
+ - Drilling down into the folder view would show you all your folders, the rules associated with each folder and email addresses.
+ - Drilling down into a contact's name on the detailed table would show various contact details of that contact, the emails and attachments that you have sent and received from this contact.
+```
+
+By pulling information relevant to the facet being inspected, user interfaces can become more useful.
+
+This could be implemented as a zoom effect where the focal widgets are scaled upwards and less relevant widgets disappear as if they were to go past and behind the user.
+
+A drill down interface is unlikely to be easy to design for because combinations and relevance would have to be determined in advance.
+
+Similar:
+
+ * Hypertext and embedded Hyperlinks within web applications can be considered a drill-down interface but is disjointed because the interface can change drastically between pages.
+ * Dialogues that pop-up when clicking on a widget in order to provide more relevant functionality catered to that widget. Edit, summary and buttons and 'more information' links trigger popups or foldout panels to handle a user's change of focal point.
+
+Potential Integration:
+
+ * Designers can use an [explorable web](#explorable-context) as a way to decide what facets of the interface are important. They can then create various designs for different facets of data.
+ 
+Existing:
+
+ * [Eagle Mode](http://eaglemode.sourceforge.net/index.html), [Server monitoring demo](http://eaglemode.sourceforge.net/servmonvideo.html)
+
+## 42. [Context As an Explorable Web: What can I use?](id:explorable-context)
+
+The context available in a given situation should be easily accessible and discoverable. A context tells a story and gives way to opportunity. This information is cucrrently discoverable through consulting documentation, asking questions or using debugging tools. Development environments should present what has already been calculated and what is available in an easy way.
+
+ * **Controllers** A web application request involves fetching data, processing and other tasks. What has the user provided? Where were they trying to go? There can be an element of duplication to this data and processing in a complex application. Cached data from previous queries can be taken advantage of.
+ * **Templating Languages** the various data available to the request such as inferred information about the user or the user's current position in a flow. Already rendered widgets can also be re-used.
+
+For example, a request is made, the server knows what user is making the request and the user is in a particular stage of the workflow. Information about the previous stages of the workflow is part of the context of this request. 
+
+## 43. Cost Aware Computing
+
+Algorithm complexity and hardware specific characteristics could mean that a given algorithm or library is more optimal for certain configurations. An algorithm used on a desktop may not always be the best on a mobile phone. A library used on a server may not be useful on a laptop.
+
+The operating system or host environment could pick the best algorithm depending on various conditions:
+
+ * resource pressure (memory, system load, network throughput)
+ * hardware specification
+
+## 44. [Interface Defined At Authorship: Meaning Added Later](id:idaa)
+
+I might not know how everything should look or act in my article until later. A tool should allow me to:
+
+ * **Specify the Intention** When I want to include something on the page, I should specify what I am adding. This could be, 'gallery', 'price of item X in database', '#screenshot'. This could be textual description, a tag, a RDF/N3 or some kind of relationship that identifies the added content in some way.
+ * **Embed the Known (Data)**: This is the actual content known at the moment of authorship. Likely this will have a known format and meaning. This may be a file path, URL, description of a HTTP request, hostnames, port numbers, actual sourcecode and arbitrary XML elements. Sometimes there will be no data and the intention is data, in this case the intention is simply a transclusion point.
+ * **View the transclusion points** This is the most important part. There should be an interface that displays all the places where particular intentions have been used. This is where we register `content handlers`.
+ * **Create the handlers** This is a mapping or function that takes the `intention`, the `data` and the `context` to produce `output` for  transclusion. (`handler(intention, data, context) → output`)
+
+
+For example, this is an excerpt from such a user interface:
+
+Description | Handler | Uses
+-	|
+`<video/>` XML element | YouTube, Vimeo URL handler | Used on 4 pages
+`<gallery` XML element | 2 handlers: Slideshow handler, Embedded Flickr handler | Embedded Flickr: 5 pages<br/> Slideshow: 1 page
+`#` | Hashtag | Twitter link | 
+`[bbcode][/bbcode]` | BB Code handler | Used on 1 page |
+`<sql>` XML element | No handler registered | Used on 2 pages |
+`<code>` HTML element | No hadler registered | Used on 5 pages |
+
+
+Interface defined at authorship is similar to mail merge and word processing but has control over the output formats of a given field. IDAA can make web development simpler as content creators, designers and programmers stay in their respective domains working in parallel.
+
+The interface part refers to how a developer did not actually specify how data should be input to give the data meaning. Detecting potential meaning is possible providing there are generic handlers such as XML elements.
+
+Potential Integrations:
+
+ * Microformats, microdata, semantic data
+ * [Living Documents](#living-documents)
+
+Existing:
+
+ * Mail merge
+ * MarkupControl
+ * The Semantic Web
+ * static site generators
+ * Wiki transclusion
+ * Word processors, Master documents and transclusion
+ 
+## 45. Community Idea: Secure Configuration Distribution
+
+Many applications ship with default configurations that are more likely to be vulnerable. A communiy could discuss the security of configuration options and offer files or patchers that ensure that common applications have proper settings. Examples would be preconfigured settings for Firefox, Chrome, Adobe Reader and Word.
+
+## 46. RESTful Living Documents
+
+The semantics of (`handler(intention, data, context) → output`) described by [IDAA](#idaa) could be handled by REST architecture where every inclusion is actually the definition of a HTTP request.
+
+For example, an image is frequently needed in multiple resolutions, sizes and quality. Typically these variants are named based on size or purpose and uploaded separately. A IDAA REST architecture would map the intention  to the HTTP protocol. For example, a website logo with a single name (http://example.com/logo) that appears in the header of the website might have a content type of `header logo` while the logo for the footer has a content type of `footer logo`. From a consumption point of view, this is might be easier to understand than having a header-logo and a footer-logo file and keeping these files up-to-date. How these resources are actually fetched depends on the handler - it may be preferable for the designer to refer the intention of a logo but have developers map the content-type to plain directories.
+
+Potential integration:
+
+ * [Triple/Widget architecture](triple-architecture)
+ * MIME
+ * HATEOAS
+
+## 47. Group and move sections lists easily
+
+Moving around blocks of text through online rich text editors and default browser text editors is painful compared to dedicated tools.
+
+Existing:
+
+ * Outliner software
+ * Mind Mapping
+
+Potential integrations:
+
+ * [Input services](#input-services)
+
+## 48. Branching Libraries
+
+Many frameworks and application architectures simply provide common abstractions for branching on input data, such as, given X then do Y. For example:
+
+ * web frameworks that provide a routing and middleware APIs allow tying code to HTTP requests
+ * command line argument processing libraries allow tying code to combinations of options and positional arguments.
+ * browsers provide allow creation of event handlers that allow one to tie code to DOM elements that handle user inputs such as click or mouseover events
+ * agent, actors that respond to messages
+ * git hooks tie code to source control actions
+
+Sometimes we want to use X as if it is a Y. Principles in one area can be used to tackle something in a completely different area using a non-traditional style.
+
+ * Read or query a document or expose a SQL database as a file system as if it is a file system. (xmllint shell, SQL FUSE drivers)
+ * Expose a web application API as a command line application.
+ * Convert FUSE calls to REST semantics
+  
+A branching library allows the branching conventions of one ecosystem to be used in another which can potentially speed up development and permit reuse. Of course these have to be specifically implemented.
+
+Existing:
+
+ * [Zapier](http://zapier.com/)
+ * FUSE, Ferris, component object models, web frameworks like Express and Sinatra
+ * [Camel](http://camel.apache.org/)
+
+
+## 49. Linked Representations
+
+A file can typically be converted between formats. Sometimes it is necessary to keep a file available in multiple formats, such as a HTML file and a PDF. In this case it is desirable that:
+
+ * whenever the HTML changes, the PDF is updated
+ * when the PDF changes, the HTML is updated
+
+Linked representations would be useful when files that are combined to create others or its converse when files are split to create others.
+
+ * an sprite file, game tile
+ * web designs that are split into assets
+
+A linked representation would automatically split the files when a source file is changed or trigger a combining action when the components are changed. If software is written from composable actions or through [data `views` on the underlying data](#data-views), this could even be bidirectional. This would mean that editing the source image or the individual pieces would cause the other to be updated.
+
+Existing:
+
+ * Everything is a file (Plan9)
+ * Saving a web page completely results in resource directory that appears adjacent to the HTML, even when moved.
+ * Makefiles, compilation, linkage
+
+
+## 50. Renderers
+
+In a [living document](#living-documents) it is infeasible to manually markup all semantic information. It may be nicer to scan or interpret documents and automatically insert meaning.
+
+Example | Handler | Uses
+|
+`555-555` | Phone number handler | Used on 1 page | 
+`744` | UNIX Permissions handler | Used on 3 pages |
+`~/known.file` | Known folder | Used on 5 pages |
+
+This can be accomplished through dedicated programs and regular expressions.
+
+ * detect phone number: clicking might cross reference to the number's owner in the user's address book or offer a telephone dialling service
+ * Using a keyword from a programming language may link the keyword to relevant documentation or known location in the codebase.
+
+Existing:
+
+ * Mail clients that interpret phone numbers, dates and times for calendar integration.
+
+## 51. Native Web Libraries
+
+Web libraries are natively implemented versions of Javascript libraries. The interface of a web library is actually Javascript. A web library is always written in Javascript first. When performance problems need to be resolved, the moving parts can be implemented in a non-Javascript language and installed in the browser.
+
+The idea is that native libraries can be added to stand-in for Javascript-libraries purely for performance reasons. These native versions would be able to act directly on the browsers internals as if the API calls were native. There should be no difference in functionality between the Javascript library and the web library.
+
+```
+navigator.require('http://example.net/library')
+```
+Where `library` is a URL to a Javascript file that is used as a key to find an installed web library. The Javascript version is used as fallback.
+
+Usecases:
+
+ * jQuery vs document.querySelectorAll
+ * number abstractions
+ * video and audio codecs
+ * encryption
+
+Potential integration:
+
+ * Automated aspect oriented development - mapping particular Javascript function calls to native calls while leaving the rest in the Javascript engine. (cut points in Javascript)
+ * Component loader frameworks
+
+## 52. Account Management Protocols
+
+Manging digital accounts is tedious as each account provider has its own graphical interface and no machine readable API. An account management protocol would allow the following:
+
+ * changing of password
+ * updating of email address and personal details
+
+This would allow a user to change an email address or personal details once and have it take effect everywhere.
+
+Potential Integration:
+
+ * Password databases
+
+## 53. Web State Machines for Testing
+
+A web page can expose a state machine to indicate multitudes of state in the web application. The state transitions can be updated incrementally as things happen or as an on-demand introspection. A testing tool can therefore verify behaviour between interactions.
+
+```
+pageobject: {
+	"warning.visible": true,
+	"searchterm": "buckets"
+}
+assertions: {
+	"warning": {
+			visible: true
+		},
+	"search": {
+		"value": "buckets"
+	}
+}
+```
+
+A page in a web application can be modelled as its own API of user behaviour.
+
+
+## 54. [Community Idea: Tech Stack Slice](id:tech-stack-slice)
+
+There is no website that allows the comparing different technology stacks. There would be a page for every permutation of technology, for example the following might be common technology pairs:
+
+ * MySql and PHP
+ * Node and MongoDB
+ 
+These pairs can included in complete technology stacks such as linux, apache, MySQL and PHP (LAMP). This may go increasingly in depth to particular database abstraction layers, web frameworks and libraries. Each page will have a list of advantages and existing projects using this stack. As projects are added, the stacks will become more specific. Attributes from individual technology interactions will rise up to the entire stack.
+
+As a user of this site, I may begin by exploring:
+
+* Pick [ programming topic | programming language | technology | category of technologies ]
+* Pick a [ programming problem | constraint | target platform ]
+* Drill down into a technology and stack combination.
+* Show existing projects or products that used this [ technology | category of technologies | architecture ]
+
+Existing:
+
+ * WikiMatrix, ForumMatrix, Alternative.To
+
+## 55. [High Level Project Overview](id:high-level-project-overview)
+
+When joining a project, there are high level asserted approaches to solving problems adopted by the project. This can be choice of technology stack and style of architecture. I should be able to see this in a single page.
+
+ * This could be a series of lists in sections with headings such as 'Data Storage', 'Protocols', 'Architecture', 'Code Conventions' and 'Project Style'.
+
+This overview should be an easy to update and shareable.
+
+## 56. Use Microservices in Projects (Microtools)
+
+We do not always need a heavyweight system for maintaining data. Wikis and document files are frustrating to update and typically fall out of date. Microtools are very specific tools unlike Wikis and management software, they serve a single purpose and make keeping track of data as simple as possible.
+
+ * **updating a list of servers in different environments**: Server X has hostname Y and IP Z and is in environment A.
+ * **important project contact details**
+ * **project setup instructions**: A special to-do list specifically for maintaining setup instructions.
+
+To be lightweight but useful, these examples could be implemented:
+
+ * as simple command line utilities that operate on plain text files
+ * as simple web based single page applications
+ * with simple APIs to add items and fetch items programmatically
+
+
+## 57. Acceptance Criteria Issue Tracker Intregration 
+
+```
+WHEN I click the search box
+AND this is my first time I've used the search box
+THEN the text should be cleared
+```
+
+This acceptance criteria follows the convention for `WHEN` and `THEN` in BDD style. Developers or testers may write automated tests with BDD tools and copy these strings into sourcecode. This is introducing a gap between where the ACs are defined and the place where they are tested. Ideally the testing should occur against the story and the AC from the story is the souce of truth. The following has taken the AC from the control of non-developers through copying AC into code:
+
+```
+var ac = {
+"I click the search box": function () {
+	searchbox.click();
+	},
+"this is my first time I've used the search box": function () {
+	return searchbox.hasBeenUsed() === false;
+	},
+"the text should be cleared": function () {
+	return searchbox.isEmpty() === true;
+	}
+}
+```
+
+```
+ac("I click the search box");
+ac("this is my first time I've used the search box") &&
+ac("the text should be cleared")
+```
+If the story and AC changes in the issue tracker, the above test will still pass.
+
+
+Strings may not be the ideal representations of acceptance criteria for they could change. AC may have similaraties with other stories and duplication creates maintainability problems. These may need a more robust link against the code that tests them.
+
+Builds now run acceptance criteria tests so that functionality is not broken through future changes.
+
+Potential integration:
+
+ * Existing BDD frameworks.
+ * Feature toggles
+
+## 58. Microtests: Cross-Project Test Suite
+
+Many bugs have common symptoms. These symptoms could be collected into a suite of tests that apply to all projects as a form of sanity testing. The following should trigger errors:
+
+ * keywords such as 'undefined', 'null', 'nil' appearing in HTML
+ * an element on the page containing no children
+ * javascript error on page load
+ * XHR requests that contain keywords like 'undefined' or 'null'
+ * server responses that contain keywords such as 'null', 'undefined'
+ * presence of strange or meaningful numbers such as '-1', '32768'
+ * saving a file with accidental junk data at the end (such as vim :wq)
+ * empty drop down boxes on a web site
+ * throbbers that never stop throbbing
+ * random symbols at the end of lines (after ;)
+ 
+
+
+## 59. [Security Proxy](id:security-proxy)
+
+The internet has made it easy to leak sensitive or confidential information. A dedicate web proxy could scan all traffic for keywords that match known sensitive information and reject it. This requires users define what they deem sensitive.
+
+This is especially important as data is always being passively collected by web pages in Javascript.
+
+Potential integration:
+
+ * Password databases
+ 
+## 60. Operating System Field 'Firewall'
+
+Form fields and widgets are sanitized for sensitive information before being made available applications. This prevents information being pasted accidentally. This is like [security proxy](#security-proxy) but for input fields.
+
+## 61. Visual Git Release Management
+
+The branches of Git projects can be visualized as connected circles where branches are created and merged back. It would be nice to generate a live version of this diagram horizontally so one can follow development of a project and understand the release structure.
+
+Existing:
+
+ * Gitk but readonly
+
+## 62. Salary Structure as a Program
+
+An open source program could determine your salary. There may be various criteria that the program records and tracks so you are paid properly. There would be chains of verification of facts to prevent abuse. This could be tested and should maximize transparency in an organization.
+
+Similar:
+
+ * Tax as a transparent open source program
+ 
+## 63. Website Annotation
+
+Adding notes to websites can function as a form of memory aid. It should be possible for me to add and save notes to a web page in case I come back later.
+
+## 64. Peer to Peer Backup
+
+Backing up files to family and friends makes sense as a form of distributed off-site backup. This has been done by numerous services such as:
+
+ * [Crashplan](http://crashplan.com/)
+ * [Wuala](http://wuala.com/)
+
+Security could be enhanced by ensuring files are broken up into pieces in the style of Bit Torrent.
+
+Potential Integration:
+
+ * [OneSwarm](http://www.oneswarm.org/)
+ * BitTorrent / BitTorrent Sync
+ 
+## 65. Open Source Subscription and Bounties
+
+Open source projects benefit from contributors and financial contributions. Donations have more impact when they are larger and by multiple people. A open source subscription would be a monthly payment that combines donations from multiple people into one large donation for a project of choice each month. The community would vote what projects to donate towards. Donations have no expectation of special requests or work to be completed.
+
+Open source bounties would be to implement a new feature or fix a bug.
+
+Existing:
+
+ * [BountySource](https://www.bountysource.com/)
+ 
+## 66. Wizards and Forms Request Data
+
+Many website forms and native applications with wizards request data across multiple pages. These applications should expose the entirety of the data they are asking for through a scriptable interface.
+
+
+## 67. Hardware Review
+
+A hardware reiew process shows how powerful your current set of detected hardware is.
+
+ * show which components are letting your machine down
+ * show approximate value at release vs current value
+ * show benchmark results
+ * shows release date and hardware generation
+ * shows what applications might struggle with this configuration
+
+Existing:
+
+ * Windows Experience Index
+
+Potential integration:
+
+ * benchmarking applications
+
+
+## 68. Right Click Outsource
+
+Task management between computers is an unsolved problem in desktop environments. Many users have multiple devices. Sending tasks, inputs or outputs to different computers is painful. Usually sending audio to be played through another computer, taking control of an application running on another computer, sharing files or streaming data to other machines requires special software. 
+
+ * I should be able to right click a running application and select `Outsource`. This will move the application to another computer. The frontend will probably be connected to the current machine but the processing will be moved elsewhere.
+ * I right click the an indication of audio playback such as the volume control of my desktop environment or in an application, I select `Outsource` and select another device to play audio through.
+ * I right click a directory on my machine and select `Outsource`. These files will now be moved to another device but still be available in the current directory.
+ 
+
+## 69. Internal and External Configuration
+
+There are two kinds of software configuration. Internal configuration is that application directly uses such as a browser and its own settings. External configuration is configuration that has been applied by the application's working environment. Both should be editable through a common interface.
+
+## 70. Proximity Sharing
+
+When you want to share files or content to people surrounding you physically, transfer is not that intuitive. With fixed workstations, it might be useful to drag files to the edges of the screen for the file to be 'dropped' into the adjacent workstation.
+
+## 71. Gaming Interfaces for Work
+
+Resource management, planning and configuration in video games provide simplified but effective and understandable controls and visibility over progress and process. Commercial software would benefit from visualizing the process and progress of work.
+
+ * A skill tree diagram of competitors, employees and suppliers.
+ * Avatars showing the state that a procedure is in where animation indicates change over time.
+ * The movement of individuals and resources around a graph.
+ * Gamers take specific and sometimes complicated actions and witness the outcome. When employees take action, the digital representation is a side effect such as an email or logging something in CRUD applications. If instead the 'doing something' is implemented as an action and witnessing the action, everything becomes more transparent.
+
+Gamification as currently realized by industry is not the same as using game interface design in business. The appeal is not making work feel like a game but to make work as clear and useable as a video game.
+
+Examples:
+
+```
+A small office 
+```
+
+Potential integration:
+
+ * [Real-time business intelligence](http://en.wikipedia.org/wiki/Real-time_business_intelligence)
+ * [Workflow management systems](http://en.wikipedia.org/wiki/Workflow#Workflow_management_system)
+ * Virtual realities, simulation games
+
+## 72. [Best Practice Q&A Feeds](id:practice-qa-feed)
+
+A computer cannot prevent you from making mistakes. Desktop and application help is frequently unable to indicate the most up-to-date industry best-practice. This can be a [microtool](#microtools).
+
+ * People specify what they consider bad practice and why.
+ * People suggest what they should do instead. (the `good practice`)
+ * A user can subscribe to a `best practice feed`.
+ * Users answer questions on the feed.
+ * User is given feedback from the answers they provide.
+ * This can be used as a form of checklist for action. They may be generic such as 'do you use backup?' to specific topics within a field.
+
+To accommodate the variety of opinions, organisations and individuals can publish their own BPF. When an application is installed, the authors may bundle a BPF to help users starting out.
+
+There are similar existing implementations. As a standard this could be created and completed with standard tools and visualizations.
+
+Similar:
+
+ * [Securing Web Application Technologies Checklist](http://www.securingthehuman.org/developer/swat)
+ * [Web Developer Checklist](http://webdevchecklist.com/)
+
+## 73. Web Of Trust Recommendations
+
+Recommendations can be decentralised. You add people that you know and share your position on a concept. This could be:
+
+ * entertainment such as a book, a website, a movie or music, restaurants
+ * a practice (see [practice-feed](#practice-qa-feed))
+ * software, shops, services
+ * routes
+
+Opinions toward concepts can be distilled to how people classify or categorise something **and** the order and the weight that they give those categories. When asked why people like, approve, dislike and disapprove of something, there is likely to be determining factor. A web of trust recommendation system attempts to find shared categories and weights rather than those that have similar ratings. Categories can have weights and weights can have categories so that users can reinforce held views.
+
+Users could also be asked to provide explicit recommendations. They are asked to consider similar content within their own collections.
+
+```
+If you like X then you might also like Y.
+```
+
+## 74. Mounted Email Attachments
+
+Email attachments can be exposed as a file system. Opening a mail client and downloading an email attachment is tedious. It should be possible to grab attachments from the file system.
+
+```
+ls /mnt/mail@example/john/
+attachment1.doc		attachment2.jpg
+```
+
+Alternatives:
+
+ * Cloud storage providers (such as Dropbox, Box, Copy, AeroFs) could automatically pull attachments from a connected mail account into storage. This way there is no need for a separate download attachment step.
+
+
+## 75. Competition Streams
+
+Organisations offering products or services should permit access to a stream or feed that provides data about their offerings. This data could then be aggregated by browers or third party services to optimize the offers to display.
+
+## 76. Voluntary Data Mining
+
+A user should be able to contact a retailer, supplier or manufacturer and ask for product recommendation given criteria. The organisation requests specific pieces of information that it will use to correlate to past purchases and offer suggestions given the target market. The customer gets a tailored recommendation from the retailer and the supplier gets accurate information about the customer and what they were looking for.
+
+## 77. [Data Disclosure Tracking](id:disclosure-tracking)
+
+Accessing a service or transmitting data reveals metadata and deliberate information. The knowledge of such disclosure should be trackable by the disclosing party.
+
+ * revealing location through web browser
+ * revealing email address or personal details via a web page
+ * files that have been transmitted by email and the metadata within these files
+
+People can then understand what information they are revealing to different parties. Inferences can also be made upon this information. For example, it is possible to infer that if an address is known, a postal code can be determined.
+
+ * X knows Y
+
+```
+Your [email address, IP address, location, phone number] has been revealed to the following actors:
+
+ * the web server amazon.co.uk on IP xxx.xxx.xxx.xxx
+ * the noreply@amazon.co.uk email account
+ * your mail provider, example.com
+
+```
+
+## 78. Cohesive Integrated Timelines
+
+Calendars can help connect relations between activities and act as a memory aid. The information from a user's interactions across multiple devices and with multiple applications could be combined into a single view. A calendar view of my system log could show:
+
+ * when I created new directories, moved or renamed files: to help remember a folder I moved
+ * when I updated my system, when I received an error: to help correlate an error with an update
+ * when I last transferred a file to this computer
+ * when I last made a purchase
+ * when I last logged into a service
+ * starting up a program, closing a program
+ * a file system or web search
+
+The calendar can serve as a workspace if activities can be segregated by task or goal. Tasks can be spread over days, weeks, months and years where ability to view past activity would be contextually useful such as:
+
+ * recurring tasks such as managing finances, mortgages, managing insurance, utility bills, large purchases
+ * switching between different tasks with completely different contexts (home and work)
+
+For example, when you are looking to buy a new vehicle, you can look at your time line for this task:
+
+ * which car dealers you visited and contacted (emails, phone calls, GPS location)
+ * the files you created and where you put them
+ * your financial state at this point in time
+ * the websites you visited as part of the research (looking at specific car models)
+
+## 79. File Wires
+
+Kepeing the data within and between files is difficult to keep synchronized. It should be possible to 'wire' up portions of files with other portions or other files so that they stay synchronized. This would be useful:
+
+ * in configuration files and in documentation: being able to include a port number that always updates when the configuration file changes
+ * in a large document where there are phrases, proper nouns, numerical or bibliographical references that one would like to keep synchronized.
+
+The file wire infrastructure would:
+
+ * Provide an interface that lets you select text or content and take a reference to it.
+ * This data can then be placed elsewhere and will stay synchronized with wherever it is put.
+ * Let you know when file wires break and the connection can no longer be maintained. This might happen if you edit a file in such a way to invalidate a reference. File wires should be generic enough that they can survive files that change.
+
+The 'wire' is the binding of data between two locations. Depending on the format, this could be anything from:
+
+ * a line number
+ * a regular expression
+ * a column position
+ * a meaningful element in the file such as a heading or XML element
+ * a reference to a marker or reference point in the document
+
+Essentially, file wires turn every decomposable part of a file into a mail merge field source and destinaton but the field references are out of band and need not be stored in the file.
+
+Potential integration:
+
+ * Existing mailmerge formats
+ * Text editor algorithmns: Ropes, [B-tree](http://codemirror.net/demo/btree.html): a special file system driver could intercept writes and reads from files with known formats to make file wires more efficient
+
+
+## 80. "Playhouse": Repeatable Prototyping
+
+Most rapid application development tools force developers to work within the confines of the tool and make it difficult to graduate to a realistic environment. Setting things up and configuring software is an impediment to prototyping ideas. A developer playhouse would take many different technologies and let them be experimented with from one interface without wrapping up the underlying technologies with proprietary code:
+
+ * Provide a simple 'view' of a project's complex directory struture by showing panels for the most important files. For exampe, JSBin and JSFiddle show HTML, Javascript and CSS panels - all that are needed to write a simple prototype.
+ * REPLs for many different languages
+ * Prototyping with frameworks: Express, Sinatra, Flask
+ * Provision of servers.
+
+Examples:
+
+```
+When Playhouse is installed, you point it at a folder.
+
+ * You click 'Express' and are given a panel for your app.js, your NPM dependency file.
+ * You select 'Chef' and are given a tab for 'Infrastructure' and are given a tab for a new recipe file and a SSH terminal.
+ * You select 'Jenkins CI'
+```
+
+Existing:
+
+ * [Repl.it](http://repl.it/)
+ * JsBin, JsFiddle
+
+Existing Examples:
+
+ * Yeoman, client side generators
+ * Vagrant, Docker
+
+
+## 81. Widget Studio
+
+A widget studio is a content management system for the repetitive sections or widgets that are used on a website or web application and are managed as assets in addition to the web site. The widget studio is is like a model editor for designers. Every single state a widget supports should be explicitly specified by the widget studio.
+
+Potential integrations:
+
+ * [Widget servers](#widget-servers)
+
+## 82. Inline HTTP Microservice Compilation
+
+When writing a controller we can interact with a library directly or we can interact with a remote service and offload the work to another machine. For example, Facebook uses RPC internally so that various microservices collaborate to fulfil a request. Inline HTTP microservice compilation would require a developer to always interact with a library through a HTTP interface. This would involve a single web request fanning out to many requests. If performance problems become an issue, the backend server behind the HTTP service can be 'inlined' or 'pulled into' the code base and replace the HTTP calls. That a HTTP interface is used should not cause overhead if a compilation or transformation step is used that avoids the network stack altogether. By using HTTP as the common interface, functionality can be pulled into the application layer or offloaded to a remote server on demand.
+
+Inlining code may require integration code that understands the project or sourecode of various web frameworks, such as a ruby on rails or nodejs project and knows how to pull in the code into the codebase. The possibility of rewriting code at compile time could further be used to improve efficiency.
+
+If this could be implemented dynamically, servers could become truly elastic: when resources are plenty, the microservices run locally. When resources become constrained, the microservices run on separate machines. 
+
+Potential integration:
+
+ * [Widget servers](#widget-servers): fetching a rendered version of every widget that is to be displayed on web page would be expensive, as one request could quickly translate into hundreds of widgets. This functionality could be 'pulled into' the application layer for efficiency while maintaining flexibility.
+
+
+## 83. Data Dependency Injection
+
+When a web server handles a request, it inevitably fetches and processes data to fulfil and display a response. In a complicated web page, data may be used by multiple widgets and there may be overlap. This should not result in duplicate requests or needless processing.
+
+ * There can be overlap between data requested or generated by business logic and that needed for display.
+ * If a query made for a widget shares a subset of data needed by business logic, then the two queries can be replaced with a single more generic query that allows the data to be fetched once and used twice.
+
+Inversion of control (IoC) containers could be used for widgets and the data they need. A widget should not be directly instantiated with information - it should pull the data it needs from its environment.
+ 
+## 84. Cache Timeout Read-in
+
+The statelessness of HTTP means that data is requested multiple times in order to fulful a request. For example, a multiple page form will typically involve queries to return the logged in user, the state of the form and the fields that have been completed. This data loaded by a web server in a controller may be useful across multiple requests. Memory caches keep data from expensive requests in memory until the next request. These caches need to be explicitly requested for the data to come available. A predictive cache read would associate a timeout with each HTTP request for when the data should be re-loaded into memory. When a user submits a form there will be a predictable delay until the next request. This lump of data - potentially representing the output of many queries - can then be associated with the user HTTP request. This data will only be read back into memory when the time delay elapses as a way of pre-empting the user's next request.
+
+Potential integrations:
+
+ * Memcached, Redis
+
+## 85. [Software Metadata](id:software-metadata)
+
+The infrastructure required to support software is spread across disparate services, servers and protocols. This information could be kept together in a metadata file that represents that piece of software:
+
+ * the source control servers
+ * a description of what the application does
+ * the bug tracking system
+ * versioning 
+ * upgrade schedule
+ * the authors, maintainers
+ * contact details, commercial support details, if available
+ * installation technique: package, script
+ * mailing lists, online chat, official community discussion
+ * dependencies
+
+With this information it might be possible to:
+
+ * submit bug reports from the desktop environment when an application has crashed
+ * easy to create a mirror for a local network or for use by a guest virtual machine
+ * download sourcecode for an binary
+ * plot a timeline showing the predicted upgrades for a machine
+
+Existing:
+
+ * [Portable Application Description files](https://en.wikipedia.org/wiki/Portable_Application_Description)
+
+## 86. Friend Pipe
+
+Sending a file or giving things to other technical users is harder than it needs to be. It should be possible to pipe things to friends and have the transport mechanism be determined behind the scenes:
+
+```
+file | friendname
+```
+
+This can be combined with a 'friend package manager'.
+
+```
+friend add <email>
+```
+
+Existing:
+
+ * [Filegive](http://freecode.com/projects/filegive)
+
+## 87. Interface Colescing
+
+When similar events occur in succession where each in isolation would have displayed a dialogue, there is a risk that they block and have to be dealt with separately or they stack on-top of one another. Examples of where this is often a problem:
+
+ * copying or transferring files
+ * error mesage dialogues 
+ * desktop environment notifications
+ * wizard dialogues
+
+Interface colescing means that a singular dialogue can 'colesce' with future dialogues to provide a better suited interface for handling multiple items.
+
+Examples:
+
+ * You select a group of files to copy or move to another folder. This opens a file transfer dialogue. You move another set of files. This transfer joins the first dialogue which collapses to handle multiple cases.
+ * You select a single item in a list to edit and an form appears. You select multiple items to edit and you receive a form better suited for editing multiple items.
+
+## 88. Batching Notifications
+
+Desktop environment notifications such as email or instant messages can be distracting. Events do not always require immediate attention and can be delayed and delivered in batches.
+
+ * Email notifications could be set to once an hour, instant message alerts to 10 minutes and social networking to once a day.
+ * The notifications should be rendered slowly and in visual order to avoid overwhelming users. In the Windows notification area (nicknamed the system tray), icons can indicate notifications.
+
+
+## 89. [Code Journey](id:code-journey)
+
+Learning a code base should be easy to start and supportive. An interactive code base exploration tool can:
+
+ * display the codebase with accompanying narrative to create an interactive walkthrough such as discussing the architecture and the various modules of a code base
+ * step-by-step REPL playback that the user can pause and continue at any time (without affecting the tutorial)
+ * annotations, diagrams, screencasts, voiceovers
+ 
+Existing:
+
+  * The [`Try Redis` demo](http://try.redis.io/)
+  * [LightTable](http://lighttable.org/)
+
+## 90. [Views of Data](id:data-views)
+
+Conversion is less useful than a view over data. When we have a view over data, we can use multiple tools to interact with the same data.
+
+ * If complex filtering or sorting behaviour cannot be shifted to a database, it would be preferable if the data retrieved could still be queried as if it was. It is likely a dedicated querying module would give better performance than writing custom sorting and filtering. The same APIs for sorting and filtering used both the client and server.
+ * Running database queries over a CSV/JSON/XML file
+ * The data being displayed on a user interface in one window is useable by the user. The user can run a query against the list of emails or interpret the email body as a document in a different format.
+
+Using views may be less efficient because data is not in an optimized data structure. For example, running a join query over a CSV file is likely to be slow. A view architecture could support this in the following ways:
+
+ * write handcrafted code that can support basic SQL functionality over text files
+ * write a mapper that converts JSON/CSV/XML into insertions into a newly spun up database server or in-memory database
+
+The user should not care what format or representation the data is in - only that they can interact with the data in multiple ways.
+
+Existing examples:
+
+ * [NeDB](https://github.com/louischatriot/nedb) compatible with MongoDB
+ * Templating on the client and on the server
+ * LINQ: functional queries over objects
+ * [Bidirectionalization](http://en.wikipedia.org/wiki/Bidirectionalization)
+ 
+## 93. Template Virtual Machine
+
+At its basic level, templating can be considered a block of memory split into dynamic and static regions:
+
+ * A single instance of the website is kept in memory.
+ * The static data and dynamic sections in-memory template are indexed.
+ * Widgets or common components are shared different pages or nested views.
+ * When a request comes in for a given page the .
+ 
+All this does is replace the generation of the contiguous block of bytes [static, dynamic, static, …] with a higher level representation of the output. Servlet layers and templating engines map the output page structure from many nested function calls and branching - the Template Virtual Machine essentially directly maps the blocks to the output. There may be the following benefits:
+
+ * The clientside can subscribe to the backend blocks and be notified when they change.
+ * Dynamic blocks are essentially `holes` that must be filled by programs.
+ * DB performance can be measured and checked for errors.
+ * Blocks can be shared between pages.
+ * Potential parallelization of dynamic blocks. Non-static data can be streamed immediately and all future dynamic blocks can run at the same time providing there are no dependencies.
+ 
+Similar: 
+
+ * [rendr](http://rendr.com/)
+ * The idea of [String Templates](http://www.stringtemplate.org/) where all substitutions must be known in advance.
+
+## 92. Personal Data API
+
+Rather than supply a collection of personal data to remote services, data should be requested from the user's machine or data custodian through an API by the remote service. This would keep all the data in a single location and ensure that data is kept in synchronization. This could be implemented by browsers.
+
+This also allows a user to track what data was disclosed to which parties.
+
+Potential integration:
+ 
+ * [Disclosure tracking](#disclosure-tracking)
+ * Account management protocols
+ * Formats for common personal data
+ * Vendor relationships management
+
+## 93. Shell Output Pinning
+
+The output of one command can be useful while running further commands. For example, a search of a directory would give a list of files. It may be nice to pin this list to the top of the shell and allow the user to work their way through the list. 
+
+Examples:
+
+ * You search a directory (grep) and pin the results to the top of the terminal. You mark off each file you process as you go.
+
+## 94. Policy Tracking
+
+Digitally serving legal agreements, policies and terms and conditions has become industry practice without any tools for users to manage, track and interrogate legal documents. A policy aware system can display policy relevant used contextually when people use computer systems as a way of encouraging users to understand.
+
+ * notifications when policies change
+ * accessing a service shows what terms are applicable in a given context such as those for a website
+ * see at a glance what conditions apply to the user such as idenmification clauses
+
+Legal documents that state a valid action
+
+Existing:
+
+ * [EULAnalyzer](http://www.brightfort.com/eulalyzer.html)
+ * [TOS Back](http://www.tosback.org/timeline.php)
+ * [Platform for Privacy Preferences Project](http://en.wikipedia.org/wiki/P3P)
+
+## 95. Community Idea: Distributed Development
+
+A pool of developers can collaborate to build a system if the individual pieces of code are well defined enough.
+
+    Developer 1 logs in and picks feature A to implement.
+    Feature A requires features B and C to exist.
+    Developer 1 describes B and C at a high level and creates an imaginary interface how these features might be used if they existed with input data corresponding to outputs.
+    Developer 1 implements feature as much of feature A as possible.
+
+    Developer 2 logs in and sees that Feature B and C are still to be implemented with the imaginary interface defined by Developer 1. Developer 2 implements features B and C, ensuring that the interfaces needed by Feature A is maintained. 
+    
+Developers collaborate by breaking up problems and shifting other ones to others. A developer operates on a small portion of the code base at any given point so that ramp-up time until productivity is low. Developers jump between features frequently.
+
+Potential integration:
+
+ * API competition: competing for the best API (not the implementation)
+
+## 96. Encyclopedic Literate Desktop
+
+Computer systems and interfaces are obtuse and do not describe what they are doing or how they function. A desktop environment should explain and describe software as if it was a living encyclopedia. Computers can be more easily understood if they allowed what's on screen to be functionally decomposed and explained.
+
+ * Select a window, click the 'flip' button to see what is 'behind' the window, as a metaphor to see what he application is doing.
+ * This gives us a description of the application and facts about the author, version and contact details.
+ * Use cases and scenarios of the application from a high level.
+ * A list of features.
+ * The current status of the application, such as what features are currently being used and how it is configured.
+ * A list of dependencies and what each dependency is used for.
+ * Where the application is stored, where it is configured
+ * What files the application opens
+ 
+These would be displayed as a overview style format in a similar style to that of a landing page for a product or service online. Each section above might be expandable (such as select a feature and learn how it works.) and linked to further information to learn more.
+
+An advanced user should be able to view the sourcecode of an application in a literate interface. The emphasis is of a readable view of the sourcecode as opposed to an editing environment to help the users understand how this particular application functions.
+
+Potential integrations:
+
+ * [Code as wiki](#code-as-wiki), [Code overlays](#code-overlays), [Code journeys](#code-journeys), [high level project overview](#high-level-project-overview)
+ * Application comparison with [tech slice](#tech-stack-slice)
+
+## 97. Community Idea: "Tracked Reasoning"
+
+Viewpoints of a discussion can be identified, related and analysed independently. When a user writes a post, the user can break up the post into separate viewpoints or assertions. These assertions may be ordered logically such as, A implies B then C. Posts will then be cross referenced to see the relationship of each viewpoint and what would need to be true or false to counter an argument.
+
+## 98. 
+
+
+
+
+ 
