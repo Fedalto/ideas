@@ -429,10 +429,13 @@ For example:
  * An application is customized to change its appearance. The `screenshots` in the documentation should update accordingly.
  * Applications that want something but cannot function such as an internet connection or are waiting input should know and continue when the desired state is restored.
  * If the user has a window minimized for a while and the window has changed since it was last viewed, there may need to be a visual indication that something has happened or changed, such as a green or red fade effect.
+ * The data on the screen should never be stale.
+
 
 Existing:
 
  * When a folder is open and a file is added, the file should appear in the folder.
+ * Observables
 
 
 ## 24. Error to Issue Tracker Linkage
