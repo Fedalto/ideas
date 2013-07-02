@@ -1,7 +1,7 @@
 One Hundred Ideas for Computing
 ===
 
-Do you like ideas? I like to write down my ideas and have been doing so for a number of years. This is an selection of my favourite ideas old and recent. My theme is integration. These ideas are numbered for reference.
+This is a vision for how computing could be. I began writing down ideas down a number of years ago, this is a selection of ideas old and new. My theme is integration.
 
 ## 1. [Email Metadata](id:email-metadata)
 
@@ -21,7 +21,7 @@ Potential Integrations
  * Life Engine
  * Living document
  * Contextual
- * [Email as social networking transport]()
+ * [Email as social networking transport](#email-as-social-networking-transport)
 
 Existing:
  
@@ -29,11 +29,11 @@ Existing:
  * [MailXML](http://www.idealliance.org/specifications/mailxml)
  * [Candle](http://candleapp.blogspot.co.uk/2011/06/why-i-invented-candle-i.html)
 
-## 2. Use Email as a Social Networking Transport
+## 2. [Use Email as a Social Networking Transport](id:email-as-social-networking-transport)
 
 The industry lacks an open social network. A social network can be build ontop of email: the user interface can  be a specialised email client with email as the transport mechanism. Everybody has an email address and web frameworks can easily communicate using mail protocols.
 
-Email can be used as a common denominator protocol. A flexible and federated social network would abstract the protocol used for communication and upgrade to a more appropriate or efficient protocol.
+Email can be used as a common denominator protocol. A flexible and federated social network would abstract the protocol used for communication and upgrade to a better or efficient protocol when appropriate such as realtime  applications or when sharing files.
 
  * Users can send invitation requests in a regular email that includes a public key.
  * All shared content remains stored on the user's computer but can be hosted elsewhere.
@@ -156,27 +156,33 @@ Running applications expose information on what information they can provide and
  * You have window open that is requesting an IP address.
  * Your machine exposes an IP address and your work VPN provides an IP address. Your online friends provide an IP address for a game server in a window.
  * You can pick the IP address from the available sources without having to type it in.
+ * You have an email open in a browser which is listing attachments. In essence, this window is 'offering' you files. You should be able to see these files listed in file selection dialogues.
 
 Existing: 
 
- * Content Negotiation
+ * Content Negotiation between decision dialogues
  
 Potential integration:
 
  * drag and drop is no longer handled by clumsy drag and drop APIs
- *
 
-## 11. Representational Computing
+## 11. [Representational Computing](id:representational-computing)
 
-Representations are specific or generic. Completing a task has a representation, such as 'render image' and if requested will select a program depending on contextual criteria. If the input data is in PNG format then it must pick a program representation that can render PNG. The inputs and outputs of programs are representations themselves so the type matching works upon programs themselves.
+Completing a task has a representation, such as 'render image' and if requested will select a program to do so depending on contextual criteria. If the input data is in PNG format then it must pick a program representation that can render PNG. The inputs and outputs of programs are representations themselves so the type matching works upon programs themselves.
 
-RC is akin to a program requesting a library that provides 'X' and having that library injected in. (see [representations are tests](#representations-are-tests))
+ * If an operation on a particular format has not been implemented but can be readily converted into a format that supports the operation, the system can follow a chain of conversions that allow an operation to be satisfied transparently. 
+ * RC is akin to a program requesting a library that provides 'X' or 'can do X to Y' and having that library injected in. (see [representations are tests](#representations-are-tests))
+ * There are many different ways of completing a task and they can be approached from different perspectives. Given a set of inputs and the intended goal, mappings or wrappers can provide for .
+ * There needs to be some form of proof that two libraries will be interoperable. Representations as tests could provide this promise as a developer will import the representation of a task and any library promising to satisfy this representation would have to pass the tests dictated by the representation.
 
 Existing:
 
  * Negotiation protocols
- * Type systems
+ * [Aspect oriented programming](http://en.wikipedia.org/wiki/Aspect-oriented_programming) 
+ * Type systems, Type systems in the operating system and desktop environment
  * Dependency Injection
+ * Testing in the field (production code that runs tests to make decisions, such as [Modernizr](http://modernizr.com/))
+ * Weaving code into binaries by purpose
 
  
 ## 12. The Package Manager-Package Manager
@@ -260,6 +266,7 @@ Bubble routing is an approach to detecting and handling events on the clientside
 Keyboard shortcuts are configured differently in each program. Shortcut configuration should be in a standard format. This way you can load them and share them between operating systems and share configurations between applications.
 
  * A user should be able to use the same shortcut configuration in one browser as another.
+ 
 
 ## 19. Separating Frontends and Backends
 
@@ -268,15 +275,15 @@ Good design separates the frontend and the backend. This should be the case on t
 Existing:
 
  * Node Webkit
- * SCGUI
+ * [Tablizer's SCGUI](http://www.geocities.com/tablizer/scgui.htm)
 
-## 20. File Management Features
+## 20. Desktop and File Management Features
 
 File management tools should make obvious raw local folders and an enhanced or remote folders. These are some features for file exploring programs I have always wanted. Some already exist.
 
-When I right click a [representation of a file](#elements-represent-themselves) (such as an icon or a filename), I should be able to interact with the file or folder in the following ways:
+When I right click a [representation of a file](#elements-represent-themselves) (such as an icon or a filename), I should be able to interact with the file or folder in a many different ways:
 
- * `Put in New Folder` asks the user for a folder name and puts the selected files into this folder. The user does not have to create a new folder and manually move the files across.
+ * `Put in New Folder` asks the user for a folder name and puts the selected files into this folder. The user does not have to create a new folder and manually move the files across. ([existing as Files 2 Folder](http://skwire.dcmembers.com/fp/?page=files-2-folder))
  * `Pull out of Folder` move the files in a folder out of the directory
  * `Copy Path` I shouldn't need to open a properties dialogue to copy the path from or construct the path myself.
  * `Storage Usage` right click and view disk usage of the file in relative to everything else on the storage device
@@ -287,7 +294,7 @@ When I right click a [representation of a file](#elements-represent-themselves) 
  * `Add To Backup` You have a backup configured and you want to add this file or folder to your existing backup procedure.
  * `Tag`
  * `Merge Folders` 
- * `Resize`
+ * `Resize` for images, videos
  * `File History` View changes of the file over time.
  * `Usages` Find references to this file from elsewhere in the file system such as in email attachments or as referenced paths.
  * `Search` Search the contents of the file.
@@ -297,12 +304,13 @@ In the detailed list view for a folder, I should be able to see the following:
 
  * `File Indicators` A file or folder that is being used or processed by another running program should be obvious from the file explorer. If a file is open in another program - show an icon of that program. If a long running process is running involving the file, show  a progress bars should appear near the file such as a progress bar for files being downloaded, copied, scanned or backed up.
  * If the file is not physically present on this machine, show icons that represent the storage services or rmeote machines that the file is available under.
- * `Time Remaining`
+  * Add arbitrary columns in file viewer. Columns can be loose - the columns displayed a the top do not necessarily have to be filled by every file. What would be better is if files that have custom files show another column header.
 
-In a file management window, I might want to be able to:
+From open windows, I should be able to:
 
 * `Jump to Path` The ability to jump to a location from anywhere in the system. You have a path in your clipboard and want to open it.
-
+* `Share Window` share an open program with another machine.
+* `Mute Audio`
 
 Existing:
 
@@ -535,6 +543,8 @@ Existing:
 
 ## 30. [Widget Servers](id:widget-servers)
 
+([see graphic](widgetservers2.png))
+
 It should be possible for design and development workflows to co-exist and to work lockstep. Modern architecture splits web applications into layers and separates data, presentation and logic. This separation is inadequate for designers. This can manifest as designs being implemented top-down into the presentation layer. Depending on the architecture, aesthetic or functional changes require development effort. A triple architecture separates and provides tools for the tasks:
 
  * Creation of the design and style of pages and their components complete with dummy data and all the different states that the widget can be in. (Design, User Experience/Design)
@@ -561,7 +571,7 @@ Potential integrations:
 
 Sourcecode we compile or execute need not be the same as that rendered to the screen. Developers should be able to work on the same code base but view sourcecode in different ways. Mounting a source directory means we can apply bidirectional transformations between the stored sourcecode and what is opened in a text editor.
 
-Coding style preferences can be configured on the mounted source code so that it appears according to the developer's taste. Developers can choose indention rules and spacing settings without affecting other developers.
+Coding style preferences can be configured on the mounted source code so that it appears according to the developer's taste. Developers can choose indention rules and spacing settings without affecting other developers. This is is like mapping between two [EditorConfig](http://editorconfig.org/) configurations automatically.
 
 Personal preference also changes how people like to organize sourcecode by directory. Directory structures can be equivalents:
 
@@ -575,14 +585,15 @@ Personal preference also changes how people like to organize sourcecode by direc
 ```
  - modules
   - users
-   - views
-   - users.controller
+   - controller
+   - model
   - products
-   - views
-   - products.controller
+   - controller
+   - model
  - public
 
 ```
+
 
 Potential integrations:
 
@@ -1166,6 +1177,7 @@ When you want to share files or content to people surrounding you physically, tr
 
 Resource management, planning and configuration in video games provide simplified but effective and understandable controls and visibility over progress and process. Commercial software would benefit from visualizing the process and progress of work.
 
+ * Visualizes the state of resources: spare capacity, tied up and bottlenecks.
  * A skill tree diagram of competitors, employees and suppliers.
  * Avatars showing the state that a procedure is in where animation indicates change over time.
  * The movement of individuals and resources around a graph.
@@ -1176,7 +1188,38 @@ Gamification as currently realized by industry is not the same as using game int
 Examples:
 
 ```
-A small office 
+A clinic has 3 general practicioner rooms, a waiting room, staff (receptionists, GPs, nurses) and stock of medicine. These are some of the resources being managed:
+
+ * timing of appointments and staff tasks
+ * physical space for procedures
+ * available personnel
+ * financial
+ * happiness of staff and patients
+
+With a gaming style interface, we can see at a glance whether or not the clinic is performing effectively:
+
+ - we would see a visualization of the clinic layout, geospatial representations of the world make things more interesting as we can observe what is going on
+ - we would see the staff counts and locations
+ - we can see medicine expiry dates and stock levels
+ - we can see the concurrency of the system if we lay out truly cohesive integrated timelines of when things are meant to happen
+ - we can ensure that tasks are distributed fairly
+
+We can answer questions:
+
+ - are there too many patients waiting?
+ - are GPs spending too much time with patients?
+ - are cancelled appointments causing wasted physical space?
+ - are doctors able to provide adequate personalised treatment in addition to performing paperwork?
+ - is there a risk to the current combination of waiting patients that could pose a health risk?
+
+We can adapt the rules of the game and check the results:
+
+ - a room becomes unavailable for use by patients perhaps due to a tecnical fault. How will we assign patients and GPs to rooms now?
+ - can we predict what repeat patients will need in terms of medicine so we can order less frequently?
+ - can we detect when staff members are in demand to minimize waiting?
+ - how can we make patients feel they are not being rushed and waiting endlessly?
+ - what kind of data can we learn from a patient's habits: are they always late and can we fit another patient in quickly?
+
 ```
 
 Potential integration:
@@ -1187,18 +1230,19 @@ Potential integration:
 
 ## 72. [Best Practice Q&A Feeds](id:practice-qa-feed)
 
-A computer cannot prevent you from making mistakes. Desktop and application help is frequently unable to indicate the most up-to-date industry best-practice. This can be a [microtool](#microtools).
+Good practices are a social construct and not given visibility in computer systems. Desktop and application help are too static to indicate the most up-to-date industry best-practice. A 'best practice feed' tool would be a peer reviewed support mechanism to provide advice and feedback when machines are being used.
 
  * People specify what they consider bad practice and why.
  * People suggest what they should do instead. (the `good practice`)
  * A user can subscribe to a `best practice feed`.
  * Users answer questions on the feed.
  * User is given feedback from the answers they provide.
- * This can be used as a form of checklist for action. They may be generic such as 'do you use backup?' to specific topics within a field.
+ * Some decisions can be programmatically determined. (Doing X is potentially bad.)
+ * This can be used as a form of checklist for action. They may be generic such as 'do you have backups?' to specific topics within a field.
 
 To accommodate the variety of opinions, organisations and individuals can publish their own BPF. When an application is installed, the authors may bundle a BPF to help users starting out.
 
-There are similar existing implementations. As a standard this could be created and completed with standard tools and visualizations.
+There are similar existing implementations. As a standard this could be created and completed with standard tools and visualizations. This can be a [microtool](#microtools) where Q&A are provided in a standard format.
 
 Similar:
 
@@ -1209,10 +1253,10 @@ Similar:
 
 Recommendations can be decentralised. You add people that you know and share your position on a concept. This could be:
 
- * entertainment such as a book, a website, a movie or music, restaurants
+ * entertainment such as a book, a website, a movie, music, restaurants
  * a practice (see [practice-feed](#practice-qa-feed))
  * software, shops, services
- * routes
+ * map routes
 
 Opinions toward concepts can be distilled to how people classify or categorise something **and** the order and the weight that they give those categories. When asked why people like, approve, dislike and disapprove of something, there is likely to be determining factor. A web of trust recommendation system attempts to find shared categories and weights rather than those that have similar ratings. Categories can have weights and weights can have categories so that users can reinforce held views.
 
@@ -1238,7 +1282,7 @@ Alternatives:
 
 ## 75. Competition Streams
 
-Organisations offering products or services should permit access to a stream or feed that provides data about their offerings. This data could then be aggregated by browers or third party services to optimize the offers to display.
+Organisations offering products or services should permit access to a stream or feed that provides data about their offerings. This data could then be aggregated by browsers or third party services to optimize the offers to display.
 
 ## 76. Voluntary Data Mining
 
@@ -1289,6 +1333,10 @@ For example, when you are looking to buy a new vehicle, you can look at your tim
  * your financial state at this point in time
  * the websites you visited as part of the research (looking at specific car models)
 
+Potential integrations:
+
+ * [Topic map engines](http://www.topicmaps.org/)
+
 ## 79. File Wires
 
 Kepeing the data within and between files is difficult to keep synchronized. It should be possible to 'wire' up portions of files with other portions or other files so that they stay synchronized. This would be useful:
@@ -1334,7 +1382,7 @@ When Playhouse is installed, you point it at a folder.
 
  * You click 'Express' and are given a panel for your app.js, your NPM dependency file.
  * You select 'Chef' and are given a tab for 'Infrastructure' and are given a tab for a new recipe file and a SSH terminal.
- * You select 'Jenkins CI'
+ * User submitted recipes are browseable on one side to get started with common applications or stacks.
 ```
 
 Existing:
@@ -1451,7 +1499,7 @@ Examples:
 Desktop environment notifications such as email or instant messages can be distracting. Events do not always require immediate attention and can be delayed and delivered in batches.
 
  * Email notifications could be set to once an hour, instant message alerts to 10 minutes and social networking to once a day.
- * The notifications should be rendered slowly and in visual order to avoid overwhelming users. In the Windows notification area (nicknamed the system tray), icons can indicate notifications.
+ * The notifications should be rendered slowly and ordered to avoid overwhelming users. In the Windows notification area (nicknamed the system tray), icons can indicate notifications.
 
 
 ## 89. [Code Journey](id:code-journey)
@@ -1469,7 +1517,7 @@ Existing:
 
 ## 90. [Views of Data](id:data-views)
 
-Conversion is less useful than a view over data. When we have a view over data, we can use multiple tools to interact with the same data.
+Applications such as wiki or ERP applications are typically monolithic where the full application is absolutely necessary to interact with the underlying data. Data conversion is needed to move data between ecosystems. Conversion is less useful than a view over data. When we have a view over data, we can use multiple tools to interact with the same data.
 
  * If complex filtering or sorting behaviour cannot be shifted to a database, it would be preferable if the data retrieved could still be queried as if it was. It is likely a dedicated querying module would give better performance than writing custom sorting and filtering. The same APIs for sorting and filtering used both the client and server.
  * Running database queries over a CSV/JSON/XML file
@@ -1480,7 +1528,7 @@ Using views may be less efficient because data is not in an optimized data struc
  * write handcrafted code that can support basic SQL functionality over text files
  * write a mapper that converts JSON/CSV/XML into insertions into a newly spun up database server or in-memory database
 
-The user should not care what format or representation the data is in - only that they can interact with the data in multiple ways.
+The user should not care what format or representation the data is in - only that they can interact with the data in multiple ways. It should be possible for many applications to operate on the same data structure.
 
 Existing examples:
 
@@ -1488,6 +1536,7 @@ Existing examples:
  * Templating on the client and on the server
  * LINQ: functional queries over objects
  * [Bidirectionalization](http://en.wikipedia.org/wiki/Bidirectionalization)
+ * [Automatic conversion with representational computing](#representational-computing)
  
 ## 93. Template Virtual Machine
 
@@ -1565,7 +1614,7 @@ Potential integration:
 
  * API competition: competing for the best API (not the implementation)
 
-## 96. Encyclopedic Literate Desktop
+## 96. [Encyclopedic Literate Desktop](id:encyclopedic-literate-desktop)
 
 Computer systems and interfaces are obtuse and do not describe what they are doing or how they function. A desktop environment should explain and describe software as if it was a living encyclopedia. Computers can be more easily understood if they allowed what's on screen to be functionally decomposed and explained.
 
@@ -1577,10 +1626,21 @@ Computer systems and interfaces are obtuse and do not describe what they are doi
  * A list of dependencies and what each dependency is used for.
  * Where the application is stored, where it is configured
  * What files the application opens
+ * The data being transmitted by a program. ([Wireshark Dissectors](http://www.wireshark.org/docs/wsdg_html_chunked/ChapterDissection.html))
  
 These would be displayed as a overview style format in a similar style to that of a landing page for a product or service online. Each section above might be expandable (such as select a feature and learn how it works.) and linked to further information to learn more.
 
 An advanced user should be able to view the sourcecode of an application in a literate interface. The emphasis is of a readable view of the sourcecode as opposed to an editing environment to help the users understand how this particular application functions.
+
+ * When I inspect a running application, I want to know all the technologies that are being used. The architecture, how the application is split into modules. What each thread is actually doing. I want to see state diagrams and workflows. I want to see the queryable services that the running aplication provides: perhaps those provided by IPC or over the network and the protocols. I want to see what widgets are currently on the screen and what they are populated with. I should be able to jump to the sourcecode, application side and library side when clicking these items. I want to see what algorithmns are being used and visualizations of how the algorithmns work, perhaps leading to a [code journey](#code-journey).
+ * Encyclopedic entries are programs that take a state and generate a document describing the state of the widget, perhaps written by that representation's author. For example, a widget author understands the internals of the widget and knows how to create a visualization of how the widget functions. This content would be transcluded into the parent encyclopedic entry for the program.
+
+Goals:
+
+ * Desktop environments become dynamic textbooks
+ * Make everything discoverable.
+ * Click and explain
+
 
 Potential integrations:
 
@@ -1591,9 +1651,100 @@ Potential integrations:
 
 Viewpoints of a discussion can be identified, related and analysed independently. When a user writes a post, the user can break up the post into separate viewpoints or assertions. These assertions may be ordered logically such as, A implies B then C. Posts will then be cross referenced to see the relationship of each viewpoint and what would need to be true or false to counter an argument.
 
-## 98. 
+## 98. The Desktop is an Integrated Development Environment
+
+A desktop environment is a development environment except windows and widgets are the files and the user's inputs are the lines of code. A desktop environment should be malleable to change in a similar way that the contents of the DOM (Document Object Model) of a web application can be easily changed. A web developer does not need to re-compile sourcecode to change how an application appears.
+
+If applications were designed to separate:
+
+ * decision what widgets should be displayed given application state
+ * deciding what data each widget should display
+ * deciding which widgets should be displayed together (logical groupings such as 'menubar', 'toolbar')
+ * deciding how to lay these widgets out (ordering, orientation)
+ * deciding how detailed these widgets will be (responsive design)
+
+Then the desktop environment and the user can override parts of the above behaviour of the application without damaging internal state of running applications. 
+
+ * a user could select an interesting region of a complex interface and 'send it to the notification area' or 'promote it to the titlebar' so that they can cut and splice the user environment how they like. This would be provided by the environment - not specifically coded. ([How can I display a live screenshot of a piece of another application?](http://blogs.msdn.com/b/oldnewthing/archive/2013/05/13/10417964.aspx))
+ * the user can interrogate and inspect the information underlying information a widget is displaying and add behaviour to it
+ * right click a 'disk usage' indicator and select 'monitor' and create a notification when disk usage reaches a threshold. The desktop environment is smart enoguh to know it is not the widget itself that is being monitored but the underlying data the widget is displaying.
+
+```
+Example: A configuration file 
+
+ - A simple visualization of a configuration file is a plaintext editor.
+ - The next layer may be a tree structure to navigate the blocks of the file.
+ - The next step would be to provide proper widgets for every value.
+ - The next step may be wizards to generate certain blocks of the configuration file.
+ - The next step may be to provide a dashboard and interpretation of what the configuration file is doing from a high level. Such as a nginx dashboard with icons for proxying. (see [representational computing](#representational-computing) and [data views](#data-views))
+
+```
+ * Interfaces are written to visualize and edit representations.
+ * Writing interfaces to interact with data needs to be as cheap as possible. It should be possible to knock up a configuration interface for a configuration file. For example, if the parse tree of a configuration file was exposed as a representation by an application, this would be much easier.
+
+Deployed applications on desktops preside in an impoverished environment compared to the environment that was used to create them. This makes installed desktop software inconsistent between installations and brittle. Various products bundle full-stack servers traditionally used on the server-side. These include web servers and databases. The provision and configuration of these servers should be no different to that used in cloud environments or in development. The desktop environment should be using provisioning tools such as Docker, Vagrant, Chef or Puppet behind the scenes. For example, installing a product that needs a MySQL database would use an existing running if installed and is of the correct version or will install a new copy. It's a complex engineering problem to make this possible, efficient and simple.
+
+Example:
+Title bars
+The top of every window in a desktop environment could be broken down like so:
+
+![Everything is composable](paneling.png "Everything is composable")
+
+A desktop environment essentially becomes a website in the sense there is a link between what is being displayed and how the user can interact with it or edit it. Every on-screen component can be customized, re-ordered and adjusted. Desktops become living infographics.
+
+Integration:
+
+ * [Encyclopedic literate desktop](#encyclopedic-literate-desktop)
+
+Existing:
+
+ * [Aurajs](http://aurajs.com/)
+ * COM/OLE Linking
+ * Firebug, Chrome development tools
+ * Microsoft MMC Snapins
 
 
+## 99. Directories Are Portals
+
+A directory can be domain specific and relevant to the types of files displayed. The layout and grouping of icons should be customisable.
+
+![Bubble back grouping](file_view.png "Bubble back grouping")
+![Application portal](systemviewer_mergedisplay.png "Application portal")
+
+ * In many file managers where folders appear first and there are many folders, no files can be seen. Folders and files could be arranged in a way that makes files and folders obvious immediately. Directories could be positioned along the top and down the right-hand side to make a `-|` shape to avoid the situation where only folders can be seen without scrolling down. This could then be sticky as the user scrolls down so that the user can always access folders.
+ * Icons are scaled according to relative importance in the directory.
+ * The background colors are arbitrary coloured to group certain files, perhaps with titles. A packing algorithm can a ensure that certain icons get arranged together in a pleasant way without breaking the uniform apperance of the icons.
 
 
+Existing:
+
+ * [Stardock Spaces](http://www.stardock.com/products/fences/)
+
+## 100. Personal Integration Framework
+
+Online tools like Zapier and drag-and-drop workflow systems enable users to mix up online services - this is something that should be possible across devices.
+
+ * A user wants to do accomplish a task - these tasks should be directly browseable. The desktop environment should provide an interactive How To system that allows configurations to be created.
+ * A user wants 1 feature in a product that offers 5. They do not necessarily care about the application. They have all the applications they want intalled but they want them to interact in a certain way.
+ * User can apply conditions to differernt tasks.
+ * These configuration and underlying services and applications required for these tasks could span across multiple devices and machines.
+ * Adding behaviours or integrating behaviours between running services and applications should be like a marketplace for features rather than applications.
+ * Developers who scratch configuration itches can wrap up simple configuration permutations as 'offering task X'
  
+This is like a package manager for normal users except that full applications are not being packaged - behaviour and configuration are.
+
+ * when I log into my laptop, close applications on phone to save power, reopen when laptop becomes inactive
+ * when I save a presentation to any device, syncronize it to all of my devices immediately
+ * when I take a photo or video, add it to my photo album
+ * keep this folder synchronized with this device
+ * keep this folder available remotely to this device
+ * always keep this window to this side of the window
+ * if I start this application, close another (perhaps to save resources)
+ * when I login to this application, turn on this machine
+ * tell me when I spend X money (determine from email parsing or [open email metadata](#email-metadata))
+ * 
+
+Existing:
+
+ * Applescript and Services
+ * [Zapier](http://zapier.com/)
