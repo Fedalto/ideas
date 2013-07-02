@@ -74,7 +74,12 @@ Blogs, forums, wikis and social networks solve variations of the same problem. U
 Examples:
 
 ```
-A blogger is reviewing a number of products on an ongoing basis. The blogger creates a post for a given product category and headings for each offering. Attributes and ratings are placed in a bulleted list. The blogger endeavours to update the blog post whenever information changes regarding a product or when a new product is to be reviewed.
+A blogger is reviewing a number of products on an ongoing basis. The
+blogger creates a post for a given product category and headings for
+each offering. Attributes and ratings are placed in a bulleted list. The
+blogger endeavours to update the blog post whenever information changes
+regarding a product or when a new product is to be reviewed.
+
 
 	- Ideally the blogger wants to display product attributes consistently and update them from one place.
 	- Creating a summary of reiews at the bottom (without having to duplicate the information)
@@ -82,7 +87,11 @@ A blogger is reviewing a number of products on an ongoing basis. The blogger cre
 	- The blogger wants to track the price or offers over time.
 	- Allow users to make comments regarding particular products or ratings. Allow users to give their own ratings for an attribute.
 
-This blogger uses a HTML strikethrough to indicate that information has been updated in a blog. This is not transparent to the user. For information such as the price or a rating of a product over time, it will be difficult to see what the value was in the past and when it was changed. They may want to show a graph of the product ratings over time.
+This blogger uses a HTML strikethrough to indicate that information has
+been updated in a blog. This is not transparent to the user. For
+information such as the price or a rating of a product over time, it
+will be difficult to see what the value was in the past and when it was
+changed. They may want to show a graph of the product ratings over time.
 ``` 
 
 Existing:
