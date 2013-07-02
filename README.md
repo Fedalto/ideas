@@ -15,11 +15,13 @@ For example:
 
  * subscribe and unsubscribe to email newsletters from one interface
  * get notified of when a product will be delivered and when it is dispatched
+ * receive an invoice? it is added to your accounting software
  * get cross platform desktop and mobile notifications, tailored to whatever device you are on
- * take back control over your notifications across your desktop, your phone
  * set up complex rules to react to different situations
  * get notified when someone replies to your forum or blog posts
  * receive notifications of what you bought, how much it cost
+ * given permission to use a service? added to your personal keyring
+ * receive a reply to a customer service ticket? it's added to your personal vendor relationship interface amongst all your other interactions with companies
 
 Potential Integrations
 
