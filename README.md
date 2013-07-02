@@ -299,9 +299,9 @@ Existing:
  * Node Webkit
  * [Tablizer's SCGUI](http://www.geocities.com/tablizer/scgui.htm)
 
-## 20. Desktop and File Management Features
+## 20. Desktop Windows and File Management Features
 
-File management tools should make obvious raw local folders and an enhanced or remote folders. These are some features for file exploring programs I have always wanted. Some already exist.
+These are some features for file exploring programs I have always wanted. Some already exist.
 
 When I right click a [representation of a file](#elements-represent-themselves) (such as an icon or a filename), I should be able to interact with the file or folder in a many different ways:
 
