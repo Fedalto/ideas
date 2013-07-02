@@ -59,7 +59,7 @@ Potential Integrations
 
 Developers need designers to give websites viable designs. This community brings developers with complete website backends and matches them with designers to give the backend a design.
 
- * Developer: "I written the business logic, the backend API and a rudimentary frontend but I need a real design for a website."
+ * Developer: "I have written the business logic, the backend API and a rudimentary frontend but I need a real design for a website."
 
 
 ## 4. [Living Documents](id:living-documents)
@@ -93,6 +93,7 @@ Existing:
 
 Life engine is a dashboard that attempts to collect information about your life and display relevant data on a single screen.
 
+ * pension performance
  * bank account balances
  * upcoming birthdays for friends
  * dream diary
@@ -111,6 +112,9 @@ Existing:
 ## 6. Community Idea: Ethical Me
 
 A tool to track the decisions of consumers to register their buying decisions in a thoughtful way.
+
+ * I didn't buy X because Y
+ * I chose product X rather than Y because attribute Z
 
 ## 7. Peer to Peer Blocking
 
@@ -316,7 +320,6 @@ In the detailed list view for a folder, I should be able to see the following:
 
 From open windows, I should be able to:
 
-* `Jump to Path` The ability to jump to a location from anywhere in the system. You have a path in your clipboard and want to open it.
 * `Share Window` share an open program with another machine.
 * `Mute Audio`
 
@@ -414,6 +417,7 @@ For example:
  * You change a keyboard button setting in an application, the documentation should automatically update to show the active shortcut.
  * An application is customized to change its appearance. The `screenshots` in the documentation should update accordingly.
  * Applications that want something but cannot function such as an internet connection or are waiting input should know and continue when the desired state is restored.
+ * If the user has a window minimized for a while and the window has changed since it was last viewed, there may need to be a visual indication that something has happened or changed, such as a green or red fade effect.
 
 Existing:
 
