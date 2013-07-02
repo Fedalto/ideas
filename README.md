@@ -503,8 +503,6 @@ There are many data patterns that are not explicitly marked up.
 
 Data classification algorithms can be ran against the text displayed on terminals or within graphical programs. This could be deferred until the user interacts with the information, perhaps on mouse hover or clicking on the information.
 
- * Clicking
-
 Existing:
 
  * Mailto links
