@@ -324,7 +324,7 @@ When I right click a [representation of a file](#elements-represent-themselves) 
 
 In the detailed list view for a folder, I should be able to see the following:
 
- * `File Indicators` A file or folder that is being used or processed by another running program should be obvious from the file explorer. If a file is open in another program - show an icon of that program. If a long running process is running involving the file, show  a progress bars should appear near the file such as a progress bar for files being downloaded, copied, scanned or backed up.
+ * `File Indicators` A file or folder that is being used or processed by another running program should be obvious from the file explorer. If a file is open in another program - show an icon of that program. If a long running process is running involving the file, progress bars should appear near the file such as a progress bar for files being downloaded, copied, scanned or backed up.
  * If the file is not physically present on this machine, show icons that represent the storage services or rmeote machines that the file is available under.
  * Add arbitrary columns in file viewer. Columns can be loose - the columns displayed a the top do not necessarily have to be filled by every file. What would be better is if files that have custom files show another column header.
 
@@ -378,6 +378,7 @@ Existing:
  * [Plan 9 ACME](http://doc.cat-v.org/plan_9/4th_edition/papers/acme/) (clicking certain strings has behaviour)
  * TermKit
  * Vimperator / [Pteradactyl](https://en.wikipedia.org/wiki/Pentadactyl_(extension)
+ * SCM Breeze or similar programs - this is limited to Git but its functionality should be part of the desktop environment and the shell
 
 ## 22. Shell as REPL
 
