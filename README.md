@@ -26,15 +26,14 @@ For example:
 Potential Integrations
 
  * HATEOAS for determining actions on an email: 'Unsubscribe' a mailing list email, 'Accept Invitation' for an invite, 'Reject Request'. We should be able to do more than just 'Reply' or 'Forward' an email.
- * Life Engine
- * Living document
- * Contextual
+ * [Life Engine](#life-engine)
+ * [Living document](#living-documents)
  * [Email as social networking transport](#email-as-social-networking-transport)
  * Vendor Relationship Management
 
 Existing:
  
- * [OpenEmailMetadata](https://github.com/samsquire/OpenEmailMetadata) - my exploration
+ * [OpenEmailMetadata](https://github.com/samsquire/OpenEmailMetadata) - my very much incomplete exploration
  * [MailXML](http://www.idealliance.org/specifications/mailxml)
  * [Candle](http://candleapp.blogspot.co.uk/2011/06/why-i-invented-candle-i.html)
 
