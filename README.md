@@ -795,7 +795,7 @@ The context available in a given situation should be easily accessible and disco
  * **Controllers** A web application request involves fetching data, processing and other tasks. What has the user provided? Where were they trying to go? There can be an element of duplication to this data and processing in a complex application. Cached data from previous queries can be taken advantage of.
  * **Templating Languages** the various data available to the request such as inferred information about the user or the user's current position in a flow. Already rendered widgets can also be re-used.
 
-For example, a request is made, the server knows what user is making the request and the user is in a particular stage of the workflow. Information about the previous stages of the workflow is part of the context of this request. 
+For example, a request is made, the server knows what user is making the request and the user is in a particular stage of the workflow. Information about the previous stages of the workflow is part of the context of this request. This data can be rendered in an interface to show what really is available - seeing the data available makes it easier to find out what you want to use when you don't know what you're looking for.
 
 ## 43. Cost Aware Computing
 
