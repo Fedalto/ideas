@@ -1690,7 +1690,7 @@ Title bars
 
 The top of every window in a desktop environment could be broken down like so:
 
-![Everything is composable](paneling.png "Everything is composable")
+![Everything is composable](https://raw.github.com/samsquire/ideas/master/paneling.PNG "Everything is composable")
 
 A desktop environment essentially becomes a website in the sense there is a link between what is being displayed and how the user can interact with it or edit it. Every on-screen component can be customized, re-ordered and adjusted. Desktops become living infographics.
 
@@ -1710,8 +1710,9 @@ Existing:
 
 A directory can be domain specific and relevant to the types of files displayed. The layout and grouping of icons should be customisable.
 
-![Bubble back grouping](file_view.png "Bubble back grouping")
-![Application portal](systemviewer_mergedisplay.png "Application portal")
+![Bubble back grouping](https://raw.github.com/samsquire/ideas/master/file_view.PNG "Bubble back grouping")
+
+![Application portal](https://raw.github.com/samsquire/ideas/master/systemviewer_mergedisplay.PNG "Application portal")
 
  * In many file managers where folders appear first and there are many folders, no files can be seen. Folders and files could be arranged in a way that makes files and folders obvious immediately. Directories could be positioned along the top and down the right-hand side to make a `-|` shape to avoid the situation where only folders can be seen without scrolling down. This could then be sticky as the user scrolls down so that the user can always access folders.
  * Icons are scaled according to relative importance in the directory.
@@ -1744,7 +1745,6 @@ This is like a package manager for normal users except that full applications ar
  * if I start this application, close another (perhaps to save resources)
  * when I login to this application, turn on this machine
  * tell me when I spend X money (determine from email parsing or [open email metadata](#email-metadata))
- * 
 
 Existing:
 
