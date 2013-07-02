@@ -148,7 +148,7 @@ Existing:
 Command line auto-complete could be offered by:
 
  * indexing the man pages intelligently to extract argument documentation
- * typing a comamnd line searches the index for arguments and either displays completion of the argument and/or provides a documentation panel for that argument.
+ * typing a command line searches the index for arguments and either displays completion of the argument and/or provides a documentation panel for that argument.
 
 For example, if the user types `grep -v`, they may get an auto-complete for `--invert-match`.
 
@@ -194,7 +194,7 @@ Completing a task has a representation, such as 'render image' and if requested 
 
  * If an operation on a particular format has not been implemented but can be readily converted into a format that supports the operation, the system can follow a chain of conversions that allow an operation to be satisfied transparently. 
  * RC is akin to a program requesting a library that provides 'X' or 'can do X to Y' and having that library injected in. (see [representations are tests](#representations-are-tests))
- * There are many different ways of completing a task and they can be approached from different perspectives. Given a set of inputs and the intended goal, mappings or wrappers can provide for .
+ * There are many different ways of completing a task and they can be approached from different perspectives. Given a set of inputs and the intended goal, mappings or wrappers can provide for treating one representation as another but in a more formal way than industry practice. What something wraps and what programs are wrappers is in the heads of people and not known by the machine.
  * There needs to be some form of proof that two libraries will be interoperable. Representations as tests could provide this promise as a developer will import the representation of a task and any library promising to satisfy this representation would have to pass the tests dictated by the representation.
 
 Existing:
