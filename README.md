@@ -41,7 +41,7 @@ Email can be used as a common denominator protocol. A flexible and federated soc
 Potential Integrations
 
  * [Email metadata](#email-metadata)
- * [Life Engine]
+ * [Life Engine](#life-engine)
  
  Existing:
  
@@ -794,7 +794,7 @@ I might not know how everything should look or act in my article until later. A 
 For example, this is an excerpt from such a user interface:
 
 Description | Handler | Uses
--	|
+--	| -- | --
 `<video/>` XML element | YouTube, Vimeo URL handler | Used on 4 pages
 `<gallery` XML element | 2 handlers: Slideshow handler, Embedded Flickr handler | Embedded Flickr: 5 pages<br/> Slideshow: 1 page
 `#` | Hashtag | Twitter link | 
@@ -901,7 +901,7 @@ Existing:
 In a [living document](#living-documents) it is infeasible to manually markup all semantic information. It may be nicer to scan or interpret documents and automatically insert meaning.
 
 Example | Handler | Uses
-|
+ -- | -- | --
 `555-555` | Phone number handler | Used on 1 page | 
 `744` | UNIX Permissions handler | Used on 3 pages |
 `~/known.file` | Known folder | Used on 5 pages |
@@ -1685,7 +1685,9 @@ Example: A configuration file
 Deployed applications on desktops preside in an impoverished environment compared to the environment that was used to create them. This makes installed desktop software inconsistent between installations and brittle. Various products bundle full-stack servers traditionally used on the server-side. These include web servers and databases. The provision and configuration of these servers should be no different to that used in cloud environments or in development. The desktop environment should be using provisioning tools such as Docker, Vagrant, Chef or Puppet behind the scenes. For example, installing a product that needs a MySQL database would use an existing running if installed and is of the correct version or will install a new copy. It's a complex engineering problem to make this possible, efficient and simple.
 
 Example:
+
 Title bars
+
 The top of every window in a desktop environment could be broken down like so:
 
 ![Everything is composable](paneling.png "Everything is composable")
