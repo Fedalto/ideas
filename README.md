@@ -13,7 +13,13 @@ Emails could contain comprehensive metadata about the human readable content dep
 
 For example:
 
- * view a list of your newsletter subscriptions, online invitations/requests, confirmed orders
+ * subscribe and unsubscribe to email newsletters from one interface
+ * get notified of when a product will be delivered and when it is dispatched
+ * get cross platform desktop and mobile notifications, tailored to whatever device you are on
+ * take back control over your notifications across your desktop, your phone
+ * set up complex rules to react to different situations
+ * get notified when someone replies to your forum or blog posts
+ * receive notifications of what you bought, how much it cost
 
 Potential Integrations
 
@@ -22,6 +28,7 @@ Potential Integrations
  * Living document
  * Contextual
  * [Email as social networking transport](#email-as-social-networking-transport)
+ * Vendor Relationship Management
 
 Existing:
  
