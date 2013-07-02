@@ -88,6 +88,7 @@ This blogger uses a HTML strikethrough to indicate that information has been upd
 Existing:
 
  * [LightTable](http://www.lighttable.com/)
+ * Google Wave
 
 ## 5. [Life Engine](id:life-engine)
 
