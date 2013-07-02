@@ -178,11 +178,11 @@ Running applications expose information on what information they can provide and
  * You have window open that is requesting an IP address.
  * Your machine exposes an IP address and your work VPN provides an IP address. Your online friends provide an IP address for a game server in a window.
  * You can pick the IP address from the available sources without having to type it in.
- * You have an email open in a browser which is listing attachments. In essence, this window is 'offering' you files. You should be able to see these files listed in file selection dialogues.
+ * You have an email open in a browser which is listing attachments. In essence, this window is 'offering' you files. You should be able to see these files listed in file selection dialogs.
 
 Existing: 
 
- * Content Negotiation between decision dialogues
+ * Content Negotiation between decision dialogs
  
 Potential integration:
 
@@ -307,7 +307,7 @@ When I right click a [representation of a file](#elements-represent-themselves) 
 
  * `Put in New Folder` asks the user for a folder name and puts the selected files into this folder. The user does not have to create a new folder and manually move the files across. ([existing as Files 2 Folder](http://skwire.dcmembers.com/fp/?page=files-2-folder))
  * `Pull out of Folder` move the files in a folder out of the directory
- * `Copy Path` I shouldn't need to open a properties dialogue to copy the path from or construct the path myself.
+ * `Copy Path` I shouldn't need to open a properties dialog to copy the path from or construct the path myself.
  * `Storage Usage` right click and view disk usage of the file in relative to everything else on the storage device
  * `Outsource` move the storage of the file elswhere but keep a link to the file here
  * `Compress`, `Convert`
@@ -444,7 +444,7 @@ If every compiler error is automatically converted into an issue and then automa
 
 There should also be some kind of mapping between the product's error state and a potential issue number. Currently the connection between an error condition and an issue in a tracking system is completely human - someone has to manually enter the error into an issue tracker and update the program to refer to it. Bug reporting should either be intregrated into an application or interpreted by the desktop or container environment. The error state should be detectable and linked to the issue tracker.
 
- * An graphical application facing an error condition typically reports errors a dialogue. This dialogue should display the known cases that cause this error. This is possible because Error Condition X was mapped to Issue Y which had associated Reason Z.
+ * An graphical application facing an error condition typically reports errors a dialog. This dialog should display the known cases that cause this error. This is possible because Error Condition X was mapped to Issue Y which had associated Reason Z.
 
 ``` 
 Error copying files: drive removed. Typically caused by:
@@ -724,12 +724,12 @@ This could be rendered like a table:
 `someLongMethodName`
 
 Type |	Argument	| type	| identifier | type | identifier
--	 |	
+---	 | --- | --- | --- | --- | ---
 type | identifier	| type | 	identifier | type | identifier
 type | identifier	| type | 	identifier | type | identifier
 type | identifier	| type | 	identifier | type | identifier
 
-This does not necessarily rendered by graphical widgets, it could be rendered with `text widgets` that respond to
+This does not necessarily rendered by graphical widgets, it could be rendered with `text widgets` that respond to operations that make sense on the new code overlay, such as adding columns or moving the arguments up and down to change the order of the underlying sourcecode - without bringing up a dialog.
 
 
 ## 38. Code as a Wiki
@@ -778,7 +778,7 @@ A drill down interface is unlikely to be easy to design for because combinations
 Similar:
 
  * Hypertext and embedded Hyperlinks within web applications can be considered a drill-down interface but is disjointed because the interface can change drastically between pages.
- * Dialogues that pop-up when clicking on a widget in order to provide more relevant functionality catered to that widget. Edit, summary and buttons and 'more information' links trigger popups or foldout panels to handle a user's change of focal point.
+ * Dialogs that pop-up when clicking on a widget in order to provide more relevant functionality catered to that widget. Edit, summary and buttons and 'more information' links trigger popups or foldout panels to handle a user's change of focal point.
 
 Potential Integration:
 
@@ -1505,18 +1505,18 @@ Existing:
 
 ## 87. Interface Colescing
 
-When similar events occur in succession where each in isolation would have displayed a dialogue, there is a risk that they block and have to be dealt with separately or they stack on-top of one another. Examples of where this is often a problem:
+When similar events occur in succession where each in isolation would have displayed a dialog, there is a risk that they block and have to be dealt with separately or they stack on-top of one another. Examples of where this is often a problem:
 
  * copying or transferring files
- * error mesage dialogues 
+ * error mesage dialogs 
  * desktop environment notifications
- * wizard dialogues
+ * wizard dialogs
 
-Interface colescing means that a singular dialogue can 'colesce' with future dialogues to provide a better suited interface for handling multiple items.
+Interface colescing means that a singular dialog can 'colesce' with future dialogs to provide a better suited interface for handling multiple items.
 
 Examples:
 
- * You select a group of files to copy or move to another folder. This opens a file transfer dialogue. You move another set of files. This transfer joins the first dialogue which collapses to handle multiple cases.
+ * You select a group of files to copy or move to another folder. This opens a file transfer dialog. You move another set of files. This transfer joins the first dialog which collapses to handle multiple cases.
  * You select a single item in a list to edit and an form appears. You select multiple items to edit and you receive a form better suited for editing multiple items.
 
 ## 88. Batching Notifications
