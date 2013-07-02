@@ -778,7 +778,7 @@ A drill down interface is unlikely to be easy to design for because combinations
 Similar:
 
  * Hypertext and embedded Hyperlinks within web applications can be considered a drill-down interface but is disjointed because the interface can change drastically between pages.
- * Dialogs that pop-up when clicking on a widget in order to provide more relevant functionality catered to that widget. Edit, summary and buttons and 'more information' links trigger popups or foldout panels to handle a user's change of focal point.
+ * Dialogs that pop-up when clicking in order to provide more relevant functionality. Edit, summary buttons and 'more information' are examples as they often trigger popups or foldout panels to handle a user's change of focal point.
 
 Potential Integration:
 
