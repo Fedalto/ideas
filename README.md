@@ -637,7 +637,7 @@ The 'Built-In Enemy' is a suite of heuristics that find security problems on a m
  
  * versions of libraries or running software
  * permission problems, the permissions of running applications (user, group)
- * exploit frameworks that to run expoit attempts locally
+ * exploit frameworks that run expoit attempts locally
  * looks for known in known versions of software
  * looks for weaknesses in the SSL certificates
 
@@ -655,7 +655,7 @@ Individuals lack personal infrastructure for photographs, videos, email or other
  * backup provision
  * synchronization
 
-Personal infrastructure providers could take the same approach as business hosting or cloud providers. They sell use of the infrastructure but provide value added services. This would be nice as an open source.
+Personal infrastructure providers could take the same approach as business hosting or cloud providers. They sell use of the infrastructure but provide value added services.
  
 Personal infrastructure providers should start a trend where they provide not only the front end applications or web clients but provide direct access to the backend machinery hosted in the cloud. This would cater for power users and casual users.
 
