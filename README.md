@@ -794,9 +794,9 @@ I might not know how everything should look or act in my article until later. A 
 For example, this is an excerpt from such a user interface:
 
 Description | Handler | Uses
---	| -- | --
-`<video/>` XML element | YouTube, Vimeo URL handler | Used on 4 pages
-`<gallery` XML element | 2 handlers: Slideshow handler, Embedded Flickr handler | Embedded Flickr: 5 pages<br/> Slideshow: 1 page
+---	| --- | ---
+`<video/>` XML element | YouTube, Vimeo URL handler | Used on 4 pages |
+`<gallery` XML element | 2 handlers: Slideshow handler, Embedded Flickr handler | Embedded Flickr: 5 pages<br/> Slideshow: 1 page |
 `#` | Hashtag | Twitter link | 
 `[bbcode][/bbcode]` | BB Code handler | Used on 1 page |
 `<sql>` XML element | No handler registered | Used on 2 pages |
@@ -901,7 +901,7 @@ Existing:
 In a [living document](#living-documents) it is infeasible to manually markup all semantic information. It may be nicer to scan or interpret documents and automatically insert meaning.
 
 Example | Handler | Uses
- -- | -- | --
+ --- | --- | ---
 `555-555` | Phone number handler | Used on 1 page | 
 `744` | UNIX Permissions handler | Used on 3 pages |
 `~/known.file` | Known folder | Used on 5 pages |
