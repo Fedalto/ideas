@@ -755,9 +755,9 @@ The embeddable widgets that platforms provide should be interchangeable and inte
  
 ## 41. Drill-down Interface
 
-A widget represents data on the screen. It has a limited amount of space because it must co-operate with other widgets on the screen to give the entire screen meaning. Widgets are constrained horizontally and vertically. The amount of data that widgets should display depends on the current geometry. A drill down interface would allow to the user to inspect a particular facet of the interface and give it more importance, perhaps by double clicking it. This would be trigger a resize of all the widgets on the screen to accommodate the user's updated intent of focus. This would involve some widgets disappearing and others appearing.
+A widget represents data on the screen. It has a limited amount of space because it must co-operate with other widgets on the screen to give the entire screen meaning. Widgets are constrained horizontally and vertically. The amount of data that widgets should display depends on the current geometry. A drill down interface would allow to the user to inspect a particular facet of the interface and give it more importance, perhaps by double clicking it. This would trigger a resize of all the widgets on the screen to accommodate the user's change of focus. This would result in widgets disappearing and others appearing.
 
- * User Interfaces should not be considred merely the output of a program, they are an interactive program that the user drives and is in full control.
+ * User Interfaces should not be considred merely the output of a program, they are an interactive program separate to business logic that the user drives and is in full control.
 
 Examples:
 
