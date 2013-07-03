@@ -128,12 +128,12 @@ A tool to track the decisions of consumers to register their buying decisions in
 
 ## 7. Peer to Peer Blocking
 
-Block by default is inconvenient to users. Community driven blocking reduces risk. Configuration options should be shareable and synchronizable to increase security.
+Block by default is inconvenient to users. Community driven blocking reduces risk. Configuration options should be shareable and synchronizable to increase security. The following configurations could be distributed to users who take part:
 
  * Firefox Request Policy
  * Host file blocking
  * Firewall rules
- * Application behaviour
+ * Application behaviour such as 'disable scripting/macros'
  
 Potential Integrations:
 
@@ -143,18 +143,22 @@ Existing:
 
  * cloud based security providers, Site Advisor
 
-## 8. Command Line Auto-complete
+## 8. Command Auto-complete
 
-Command line auto-complete could be offered by:
+Command auto-complete could be implemented by:
 
- * indexing the man pages intelligently to extract argument documentation
- * typing a command line searches the index for arguments and either displays completion of the argument and/or provides a documentation panel for that argument.
+ * indexing the man pages to extract documentation for the arguments of every command
+ * typing a command begins a searches the index for arguments and either displays completion of the argument and/or provides a documentation panel for that argument.
+ * or applications expose what they provide (see [representational computing](#representational-computing))
 
-For example, if the user types `grep -v`, they may get an auto-complete for `--invert-match`.
+For example, if the user types `grep -v`, they may get an auto-complete for `--invert-match`. We could also provide transformations using knowledge from the index:
+
+ * converting between long options and short options - useful for self-documenting shell scripts
+ * sort arguments so they always appear in the same order
 
 Potential integrations:
 
- * Use doclifter and parse process resulting DocBook XML
+ * Use doclifter and parse resulting DocBook XML
 
 ## 9. [Elements Represent Themselves](id:elements-represent-themselves)
 
@@ -164,14 +168,14 @@ A rendering of data should stand-in and represent itself.
 
  * If an application displays an IP address, a hostname, a filesize or some unit measurement, the user should be able to interact with these things with a tool that accepts these as arguments. Clicking a filesize may show where that space is being taken on the filesystem. Clicking an IP address may offer actions such as 'ping'. Clicking a unit measurement may show unit conversion tools.
  
-When data is rendered, its type information should be preserved.
+When data is rendered, its type information should be preserved so that the user can interact with it.
 
 Potential Integrations:
 
- * the environment has knowledge, representational computing
+ * [the environment has knowledge](#the-environment-has-knowledge), [representational computing](#representational-computing)
  * types in the desktop environment
  
-## 10. The Environment has Knowledge / Context-Aware Computing
+## 10. [The Environment has Knowledge](id:the-environment-has-knowledge) / Context-Aware Computing
  
 Running applications expose information on what information they can provide and what they will accept. Bring type systems up into the desktop environment. Everything - including programs, have a type and have typed parameters. A system should help you fulfil type arguments for running programs. For example:
 
@@ -180,9 +184,6 @@ Running applications expose information on what information they can provide and
  * You can pick the IP address from the available sources without having to type it in.
  * You have an email open in a browser which is listing attachments. In essence, this window is 'offering' you files. You should be able to see these files listed in file selection dialogs.
 
-Existing: 
-
- * Content Negotiation between decision dialogs
  
 Potential integration:
 
@@ -190,7 +191,7 @@ Potential integration:
 
 ## 11. [Representational Computing](id:representational-computing)
 
-Completing a task has a representation, such as 'render image' and if requested will select a program to do so depending on contextual criteria. If the input data is in PNG format then it must pick a program representation that can render PNG. The inputs and outputs of programs are representations themselves so the type matching works upon programs themselves.
+Completing a task has a representation, such as 'render image' and if requested will select a program to do so depending on criteria. If the input data is in PNG format then it must pick a program representation that can render PNG. The inputs and outputs of programs are representations themselves so the type matching works upon programs themselves.
 
  * If an operation on a particular format has not been implemented but can be readily converted into a format that supports the operation, the system can follow a chain of conversions that allow an operation to be satisfied transparently. 
  * RC is akin to a program requesting a library that provides 'X' or 'can do X to Y' and having that library injected in. (see [representations are tests](#representations-are-tests))
@@ -255,7 +256,7 @@ Existing:
  
 Infrastructure is complicated and the relationships between hosts, paths, ports and servers create a web of complexity. Tools like Chef and Puppet help generate configuration files that programs can read. A configuration spider would allow detecting and connecting the relationships between these configuration files.
 
-The spider would scan for configuration files, identify port numbers, paths and hostnames to insert into a graph. When the spider detects a reference to the same value, it creates an edge from both usages to the actual data. This graph then becomes a reprsentation of system configuration, the edges link the configuration values are live and synchronized, an administrator can change the data in a single location and cause the usages to update.
+The spider would scan for configuration files, identify port numbers, paths and hostnames to insert into a graph. When the spider detects a reference to the same value, it creates an edge from both usages to the actual data. This graph then becomes a reprsentation of system configuration, the edges link the configuration values are live and synchronized, an administrator can change the data in a single location and cause the usages to update. This could be rendered to the screen as a graph.
 
 ## 15. Community Idea: [Create This](id:create-this)
 
@@ -539,13 +540,14 @@ Existing:
 
 ## 28. [Representations are Tests](id:representations-are-tests)
 
-A representation dictates what you can do or how you can use it. A PNG file, a JSON document or C sourcecode or a HTML file. An interface is validated by the tests that it passes. What something is can be determined by the tests that it passes.
+A representation dictates what something is and what you can do with it. A PNG file, a JSON document, C sourcecode or a HTML file are accepted as inputs by different applications and operations. How do we know that that applications are interoperable and compatible? Representations can be inferred by the tests that they pass. This is similar to a type inferring programming language: we can build tests that represent high level qualities about applications and data formats. These are some high level examples that reason about the outputs or characteristics of programs or representations:
 
- * A HTTP server supports the 'HTTP Protocol'. A HTTP server has an interface of HTTP methods over TCP. This can be verified by a test suite, perhaps one based on an RFC.
- * A sort algorithm can be stable or unstable.
- * Compliance tests such as those for JSON parsers.
+ * An sort algorithm that is stable or unstable.
+ * Benchmarks to estimate space and time complexity. ([similar to cost aware computing](cost-aware-computing))
+ * A library that accepts files at different levels of compliance.
 
-The hard part is providing a mapping between a representation definition and the true interface.
+If programs are representations too, they could even be interchangeable. For example, a HTTP client can execute HTTP methods taking various body data with request headers and return response headers and data. The client could be implemented in many different languages but this described interface is the same regardless of the language. If I import the 'HTTP Client' representation and use HTTP methods, this will result in calls to the underlying HTTP library. This would require wrappers that wrap the real library with a generic interface. Alternatively I was hoping that test cases themselves help describe the interface because test cases for libraries inevitably involve calling the libraries. For examle Apache HttpClient and the connect library in node each have an interface to GET a page by URL which will probably be a string. A sufficiently structured test case may even be able to create a picture about the expected inputs, the interface and the outputs. This could even use mocking or stubbing libraries to 'record' calls to library functions. Essentially we want to map our subset of data and outputs to a real library.
+
 
 ## 29. Community Idea: API Competition
 
@@ -797,7 +799,7 @@ The context available in a given situation should be easily accessible and disco
 
 For example, a request is made, the server knows what user is making the request and the user is in a particular stage of the workflow. Information about the previous stages of the workflow is part of the context of this request. This data can be rendered in an interface to show what really is available - seeing the data available makes it easier to find out what you want to use when you don't know what you're looking for.
 
-## 43. Cost Aware Computing
+## 43. [Cost Aware Computing](id:cost-aware-computing)
 
 Algorithm complexity and hardware specific characteristics could mean that a given algorithm or library is more optimal for certain configurations. An algorithm used on a desktop may not always be the best on a mobile phone. A library used on a server may not be useful on a laptop.
 
@@ -805,6 +807,10 @@ The operating system or host environment could pick the best algorithm depending
 
  * resource pressure (memory, system load, network throughput)
  * hardware specification
+ 
+ Existing:
+ 
+  * database query optimizers
 
 ## 44. [Interface Defined At Authorship: Meaning Added Later](id:idaa)
 
