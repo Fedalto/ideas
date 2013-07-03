@@ -1569,7 +1569,7 @@ Existing examples:
  * [Bidirectionalization](http://en.wikipedia.org/wiki/Bidirectionalization)
  * [Automatic conversion with representational computing](#representational-computing)
  
-## 93. Template Virtual Machine
+## 91. Template Virtual Machine
 
 At its basic level, templating can be considered a block of memory split into dynamic and static regions:
 
