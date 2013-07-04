@@ -819,7 +819,7 @@ You want to create a document. You want:
  * outputs from web services, database query results
  * files from the filesystem or remote storage 
 
-Traditional content management tools define rigid input formats and inflexible GUIs for inserting content.  Exacerbating this inflexibility is the tight coupling of this input interface to its display. There is a one to one mapping of input to output. This model is ad odds of how well people understand tools: while writing a document, I do not care or even know how I'll integrate other content into my article. What's important to me is that I can insert placeholders for content and have these placeholders be processed later. In fact, I might not even be the same person who integrates the content together because I might be a content producer, marketer, designer or a journalist. 
+Traditional content management tools define rigid input formats and inflexible GUIs for inserting content.  Exacerbating this inflexibility is the tight coupling of this input interface to its display. There is a one to one mapping of input to output. This model is at odds of how well people understand tools: while writing a document, I do not care or even know how I'll integrate other content into my article. What's important to me is that I can insert placeholders for content and have these placeholders be processed later. In fact, I might not even be the same person who integrates the content together because I might be a content producer, marketer, designer or a journalist. 
 
 I might not know how everything should look or act in my article until later. A tool should allow me to:
 
