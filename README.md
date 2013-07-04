@@ -711,7 +711,7 @@ Documentation and wikis are prone to fall behind a code base. Creating documenta
 
 ## 37. [Code Overlays](id:code-overlays)
 
-Code overlays can make sourcecode more like a document and make it easier to understand. Source code editors make poor use of space when rendering code. For example:
+Code overlays can make sourcecode more like a document and easier to read. Source code editors make poor use of space when rendering code. For example:
 
 ```
 someLongMethodName	(type identifier, type identifier, type identifier,
@@ -730,7 +730,7 @@ type | identifier	| type | 	identifier | type | identifier
 type | identifier	| type | 	identifier | type | identifier
 type | identifier	| type | 	identifier | type | identifier
 
-This does not necessarily rendered by graphical widgets, it could be rendered with `text widgets` that respond to operations that make sense on the new code overlay, such as adding columns or moving the arguments up and down to change the order of the underlying sourcecode - without bringing up a dialog.
+This tabular widget would permit moving cells up and down or lett and right to manipulate the ordering of the arguments list and update the ordering of the underlying sourcecode without using a refactoring dialog.
 
 
 ## 38. Code as a Wiki
@@ -843,8 +843,7 @@ Description | Handler | Uses
 `<sql>` XML element | No handler registered | Used on 2 pages |
 `<code>` HTML element | No hadler registered | Used on 5 pages |
 
-
-Interface defined at authorship is similar to mail merge and word processing but has control over the output formats of a given field. IDAA can make web development simpler as content creators, designers and programmers stay in their respective domains working in parallel.
+Interface defined at authorship is similar to mail merge except the user does not care about the 'field format' and how the fields are transformed can be customized. IDAA can make web development simpler as content creators, designers and programmers stay in their respective domains working in parallel.
 
 The interface part refers to how a developer did not actually specify how data should be input to give the data meaning. Detecting potential meaning is possible providing there are generic handlers such as XML elements.
 
