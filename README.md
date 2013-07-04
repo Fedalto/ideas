@@ -730,7 +730,7 @@ type | identifier	| type | 	identifier | type | identifier
 type | identifier	| type | 	identifier | type | identifier
 type | identifier	| type | 	identifier | type | identifier
 
-This tabular widget would permit moving cells up and down or lett and right to manipulate the ordering of the arguments list and update the ordering of the underlying sourcecode without using a refactoring dialog.
+This tabular widget would permit moving cells up and down or lett and right to manipulate the ordering of the arguments list. This would update the ordering of the underlying sourcecode without using a refactoring dialog.
 
 
 ## 38. Code as a Wiki
