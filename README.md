@@ -522,8 +522,7 @@ The data that is being rendered by an application can be inspected and used as a
  
 This functionality would be user driven as to avoid performance issues. If I want to see what an application is using or doing:
 
- * I should be able to 'inspect' a program to view various aspects of the program. This could be a tree view that shows resources the application is using,  what components have been loaded, the data that is currently being operating on and the modules are loaded. I should be able to see the internals of the application but in a high-level way. This should be queryable programmatically and useable in a distributed setting. ([explorable context](#explorable-context))
-
+ * I should be able to 'inspect' a program to view various aspects of the program. This could be a tree view that shows resources the application is using, what components have been loaded, the data loaded into each widget the modules are loaded. I should be able to see the internals of the application but in a high-level way. This should be queryable programmatically and useable in a distributed setting. ([explorable context](#explorable-context))
 
 Similar:
 
@@ -814,12 +813,23 @@ The operating system or host environment could pick the best algorithm depending
 
 ## 44. [Interface Defined At Authorship: Meaning Added Later](id:idaa)
 
+You want to create a document. You want:
+
+ * videos, images, audio
+ * outputs from web services, database query results
+ * files from the filesystem or remote storage 
+
+Traditional content management tools define rigid input formats and inflexible GUIs for inserting content.  Exacerbating this inflexibility is the tight coupling of this input interface to its display. There is a one to one mapping of input to output. This model is ad odds of how well people understand tools: while writing a document, I do not care or even know how I'll integrate other content into my article. What's important to me is that I can insert placeholders for content and have these placeholders be processed later. In fact, I might not even be the same person who integrates the content together because I might be a content producer, marketer, designer or a journalist. 
+
 I might not know how everything should look or act in my article until later. A tool should allow me to:
 
- * **Specify the Intention** When I want to include something on the page, I should specify what I am adding. This could be, 'gallery', 'price of item X in database', '#screenshot'. This could be textual description, a tag, a RDF/N3 or some kind of relationship that identifies the added content in some way.
+ * **Specify the Placeholder (or Intention)** When I want to include something on the page, I should specify what I am adding. This could be, 'gallery', 'price of item X in database', a reference to a Twitter hashtag or a presentation. This could be textual description, a tag, a RDF/N3 or some kind of relationship that identifies the added content in some way. This could even be a description of what the content creator wants to include - a note or requirement for consuming by a developer or the designer behind the website.
  * **Embed the Known (Data)**: This is the actual content known at the moment of authorship. Likely this will have a known format and meaning. This may be a file path, URL, description of a HTTP request, hostnames, port numbers, actual sourcecode and arbitrary XML elements. Sometimes there will be no data and the intention is data, in this case the intention is simply a transclusion point.
- * **View the transclusion points** This is the most important part. There should be an interface that displays all the places where particular intentions have been used. This is where we register `content handlers`.
- * **Create the handlers** This is a mapping or function that takes the `intention`, the `data` and the `context` to produce `output` for  transclusion. (`handler(intention, data, context) → output`)
+ * **View the transclusion points** This is the most important part. This is an interface that displays all the places where particular intentions/placeholders have been used. This is like a workflow system that shows all the 'unresolved' placeholders. Some placeholders/intents are implicit, such as URLs which you may wish to handle specifically depending on the address.
+ 
+By treating the transclusion points as independent items to be tracked and controlled, we have better control of content that can evolve over time and stay consistent between pages. The transclusion points are 'holes' to be filled by some arbitrary process defined in the future or not at all.
+
+ * **Handling a transclusion point** We can define `content handlers` to handle transclusion points. This is a mapping or function that takes the `intention`, the `data` and the `context` to produce `output` for  transclusion. (`handler(intention, data, context) → output`)
 
 
 For example, this is an excerpt from such a user interface:
