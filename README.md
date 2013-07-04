@@ -514,11 +514,11 @@ Existing:
 
 The data that is being rendered by an application can be inspected and used as a datasource for another interface. This should also be programmatically accessible.
  
- * An open folder manager window a folder open. This can be interpreted as a list of dates and times. A calendar program can read and display the sequence of dates and times to show when files were created/modified along a timeline. This may be useful with photographs.
+ * An open folder manager window has a folder open. Amongst other things, this can be interpreted as a list of dates and times (for the files in the folder). A calendar program can read and display the sequence of dates and times to show when files were created/modified along a timeline. This may be useful with photographs.
  
  * A spreadsheet program is opened and contains a sequence of dates. When the user views a date in a different application or on a web page, the environment refers to the spreadsheet filename.
  
-  * An application or form on a website is requesting a piece of data. Data of the same type is also being displayed in another user interface. Selecting the input field will display a list of potential sources of this information, one being the active application.
+ * An application or form on a website is requesting a piece of data. Data of the same type is also being displayed in another user interface. Selecting the input field will display a list of potential sources of this information, one being the active application.
  
 This functionality would be user driven as to avoid performance issues. If I want to see what an application is using or doing:
 
